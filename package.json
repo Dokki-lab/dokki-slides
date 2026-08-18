@@ -1,0 +1,35 @@
+{
+  "name": "dokki-slides",
+  "version": "1.0.0",
+  "description": "Open-source AI presentation skill for Dokki, Claude Code, Codex and OpenClaw. Create interactive web slides and export editable PPTX.",
+  "type": "module",
+  "license": "MIT-0",
+  "bin": {
+    "dokki-slides": "./skill/scripts/dokki-slides.mjs"
+  },
+  "scripts": {
+    "build:vendor": "esbuild build/pptxgen-entry.mjs --bundle --platform=node --format=esm --target=node18 --outfile=skill/scripts/vendor/pptxgenjs.mjs",
+    "test": "node --test",
+    "validate:example": "node skill/scripts/dokki-slides.mjs validate examples/product-launch/presentation.json",
+    "build:example": "node skill/scripts/dokki-slides.mjs package examples/product-launch/presentation.json --out-dir dist/product-launch"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10",
+    "pptxgenjs": "4.0.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ai-presentation",
+    "agent-skills",
+    "claude-code",
+    "codex",
+    "dokki",
+    "html-slides",
+    "openclaw",
+    "powerpoint",
+    "pptx",
+    "presentation"
+  ]
+}

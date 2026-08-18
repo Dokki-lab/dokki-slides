@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "dokki-slides@1",
+  "deckRevision": "example-product-launch-v1",
+  "title": "Product Launch Brief",
+  "locale": "en-US",
+  "theme": {
+    "background": "0B1020",
+    "surface": "151C32",
+    "text": "F8FAFC",
+    "muted": "94A3B8",
+    "accent": "635BFF",
+    "fontFamily": "Aptos",
+    "fontFamilyCjk": "Noto Sans SC"
+  },
+  "slides": [
+    {
+      "id": "opening",
+      "title": "Product Launch Brief",
+      "notes": "Introduce the product promise and the audience.\n\n[Sources]\n- Internal product brief",
+      "elements": [
+        { "id": "accent", "type": "shape", "shape": "roundRect", "x": 120, "y": 130, "w": 180, "h": 18, "fill": "635BFF" },
+        { "id": "title", "type": "text", "x": 120, "y": 210, "w": 1450, "h": 260, "text": "Make every decision\nvisible and actionable", "fontSize": 64, "fontWeight": 700, "color": "F8FAFC" },
+        { "id": "subtitle", "type": "text", "x": 125, "y": 590, "w": 1100, "h": 80, "text": "A launch story built once for the web and PowerPoint.", "fontSize": 28, "color": "94A3B8" }
+      ]
+    },
+    {
+      "id": "traction",
+      "title": "Momentum compounds when the workflow stays connected",
+      "notes": "Explain the three periods and the underlying measurement.\n\n[Sources]\n- Synthetic example data",
+      "elements": [
+        { "id": "title", "type": "text", "x": 110, "y": 80, "w": 1620, "h": 100, "text": "Connected workflows compound momentum", "fontSize": 38, "fontWeight": 700 },
+        { "id": "chart", "type": "chart", "chartType": "bar", "x": 120, "y": 240, "w": 1080, "h": 650, "categories": ["Q1", "Q2", "Q3"], "series": [{ "name": "Active teams", "values": [18, 42, 79] }], "colors": ["635BFF"], "showValue": true },
+        { "id": "callout-box", "type": "shape", "shape": "roundRect", "x": 1320, "y": 300, "w": 430, "h": 300, "fill": "151C32", "overlapGroup": "growth-callout" },
+        { "id": "callout-value", "type": "text", "x": 1380, "y": 350, "w": 310, "h": 90, "text": "4.4×", "fontSize": 56, "fontWeight": 700, "color": "635BFF", "align": "center", "overlapGroup": "growth-callout" },
+        { "id": "callout-label", "type": "text", "x": 1370, "y": 470, "w": 330, "h": 100, "text": "growth across three quarters", "fontSize": 22, "color": "94A3B8", "align": "center", "overlapGroup": "growth-callout" }
+      ]
+    },
+    {
+      "id": "plan",
+      "title": "Launch sequence",
+      "notes": "Close with owners and next actions.",
+      "elements": [
+        { "id": "title", "type": "text", "x": 110, "y": 80, "w": 1500, "h": 100, "text": "Three moves turn attention into adoption", "fontSize": 40, "fontWeight": 700 },
+        { "id": "table", "type": "table", "x": 120, "y": 330, "w": 1680, "h": 500, "fontSize": 20, "rows": [["Phase", "Outcome", "Owner"], ["Preview", "Qualified design partners", "Product"], ["Launch", "Clear proof and activation", "GTM"], ["Expand", "Repeatable team rollout", "Customer Success"]] }
+      ]
+    }
+  ]
+}

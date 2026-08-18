@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "dokki-slides",
+  "display_name": "Dokki Slides",
+  "version": "1.0.0",
+  "entrypoint": "SKILL.md",
+  "protocol": "dokki-slides@1",
+  "source": {
+    "provider": "github",
+    "repository": "Dokki-lab/dokki-slides"
+  },
+  "execution": "isolated",
+  "capabilities": [
+    "artifact:write",
+    "file:write",
+    "sandbox:execute"
+  ],
+  "network": "none",
+  "secrets": [],
+  "outputs": [
+    "text/html",
+    "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+  ]
+}

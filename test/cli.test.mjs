@@ -6,6 +6,7 @@ import test from "node:test"
 import { execFile } from "node:child_process"
 import { promisify } from "node:util"
 import { validateDeck } from "../skill/scripts/lib/model.mjs"
+import { renderHtml } from "../skill/scripts/lib/render-html.mjs"
 
 const exec = promisify(execFile)
 const root = path.resolve(import.meta.dirname, "..")
@@ -36,4 +37,16 @@ test("packages matching HTML and PPTX outputs", async () => {
 test("rejects web-only elements without a PPTX fallback", () => {
   const result = validateDeck({ schemaVersion: "dokki-slides@1", deckRevision: "r1", title: "Deck", locale: "en-US", theme: {}, slides: [{ id: "one", elements: [{ id: "custom", type: "html", x: 0, y: 0, w: 100, h: 100, html: "<b>Hi</b>" }] }] })
   assert.ok(result.errors.some((error) => error.includes("fallbackImage")))
+})
+
+test("keeps one fixed logical canvas and scales the complete stage on narrow viewports", async () => {
+  const deck = JSON.parse(await fs.readFile(example, "utf8"))
+  const html = await renderHtml(deck)
+
+  assert.match(html, /\.stage\{[^}]*width:1920px;height:1080px/)
+  assert.match(html, /data-canvas-width="1920" data-canvas-height="1080"/)
+  assert.match(html, /Math\.min\(rect\.width\/1920,rect\.height\/1080\)/)
+  assert.match(html, /stage\.style\.transform='translate\(-50%,-50%\) scale\('/)
+  assert.match(html, /new ResizeObserver\(fit\)\.observe\(deck\)/)
+  assert.doesNotMatch(html, /width:min\(100vw,calc\(100vh \* 16\/9\)\)/)
 })

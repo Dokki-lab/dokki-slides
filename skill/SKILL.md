@@ -2,16 +2,17 @@
 name: dokki-slides
 description: Create or revise interactive web slide decks and export editable PPTX files. Use for presentations, pitch decks, reports, talks, slide artifacts, PowerPoint, PPT, or PPTX generation; do not use for importing or faithfully editing an existing PPTX in v1.
 license: LICENSE
-compatibility: Node.js 18+ for validation and PPTX export. Dokki mode additionally needs Artifact creation and file upload capabilities. No secrets or network access are required for local assets.
 metadata:
   author: Dokki
-  version: "1.0.0"
+  version: "1.0.1"
   protocol: dokki-slides@1
 ---
 
 # Dokki Slides
 
 Build one canonical deck and publish it as both an interactive HTML presentation and an editable PPTX. The canonical input is `presentation.json`; never maintain separate slide content for the web and PowerPoint outputs.
+
+Requires Node.js 18+ for validation and PPTX export. Dokki mode additionally needs Artifact creation and file upload capabilities. Local assets require no secrets or network access.
 
 ## Route the task
 
@@ -38,7 +39,7 @@ node scripts/dokki-slides.mjs validate /absolute/path/presentation.json
 node scripts/dokki-slides.mjs package /absolute/path/presentation.json --out-dir /absolute/path/output
 ```
 
-`package` writes `presentation.json`, `index.html`, `exports/<slug>.pptx`, and `quality-report.json`. Do not report success if validation fails. Inspect every slide in the HTML output and open or render the PPTX before delivery. Fix unintended overlap, clipping, small text, missing assets, and fallback warnings.
+`package` writes `presentation.json`, `index.html`, `exports/<slug>.pptx`, and `quality-report.json`. Do not report success if validation fails. Inspect every slide in the HTML output at desktop and a narrow portrait viewport, then open or render the PPTX before delivery. Fix unintended overlap, clipping, small text, missing assets, and fallback warnings.
 
 ## Publish to Dokki
 

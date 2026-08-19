@@ -4,7 +4,7 @@ description: Create or revise interactive web slide decks and export editable PP
 license: LICENSE
 metadata:
   author: Dokki
-  version: "1.0.2"
+  version: "1.0.3"
   protocol: dokki-slides@1
 ---
 
@@ -47,7 +47,7 @@ Read [the Dokki publishing contract](references/dokki.md) only when Dokki tools 
 
 - Upload the generated PPTX first and obtain its stable Dokki File resource URL.
 - Re-run `package` with `--export-url <stable-url>` so the Artifact's Export button points to that file.
-- Create or update one ordinary HTML Artifact using the generated `index.html` source.
+- Create one ordinary HTML Artifact directly from the generated `index.html` with `sandbox_push_artifact`; do not read the large source back through the model, upload it as an HTML File, or use a placeholder variable.
 - Record `sourceSkill=github.com/Dokki-lab/dokki-slides` and the immutable Skill commit as `sourceRevision` on both resources, alongside the same `deckRevision`. After any content change, regenerate and replace both outputs.
 - Return links to both the Artifact and the companion File.
 

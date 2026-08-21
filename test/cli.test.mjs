@@ -102,6 +102,16 @@ test("keeps package, Dokki, and Claude marketplace versions aligned", async () =
   assert.match(skill, new RegExp(`version: "${packageJson.version.replaceAll(".", "\\.")}"`))
 })
 
+test("keeps Dokki publication environment-safe and progress concise", async () => {
+  const skill = await fs.readFile(path.join(root, "dokki-slides", "SKILL.md"), "utf8")
+  const dokki = await fs.readFile(path.join(root, "dokki-slides", "references", "dokki.md"), "utf8")
+  assert.match(skill, /never synthesize a hostname/)
+  assert.match(skill, /Keep execution progress phase-level/)
+  assert.match(dokki, /resource:\/\/<resource-id>/)
+  assert.match(dokki, /never turn a Staging resource into a `dokki\.one` URL/)
+  assert.match(dokki, /do not expose each internal sandbox retry/)
+})
+
 test("packages local assets and rejects paths outside the deck directory", async () => {
   const source = await fs.mkdtemp(path.join(os.tmpdir(), "dokki-slides-assets-"))
   await fs.mkdir(path.join(source, "assets"))

@@ -4,7 +4,7 @@ description: Create or revise interactive web slide decks and export editable PP
 license: LICENSE
 metadata:
   author: Dokki
-  version: "1.1.0"
+  version: "1.1.1"
   protocol: dokki-slides@1
 ---
 
@@ -43,11 +43,13 @@ node scripts/dokki-slides.mjs package /absolute/path/presentation.json --out-dir
 
 `package` writes `presentation.json`, `index.html`, `exports/<slug>.pptx`, and `quality-report.json`. Do not report success if validation fails. Read and perform [the rendered quality review](references/quality.md): inspect every slide in HTML at desktop and a narrow portrait viewport, then open or render every PPTX page. Fix P0 defects and polish P1 findings before delivery.
 
+Keep execution progress phase-level: author, build, rendered review, and publish. Batch related reference reads, reuse the supplied CLI and one QA harness, and summarize recoverable validation fixes instead of narrating every sandbox command, transient script bug, or retry to the user. Never repeat a tool call with unchanged arguments.
+
 ## Publish to Dokki
 
 Read [the Dokki publishing contract](references/dokki.md) only when Dokki tools are available.
 
-- Upload the generated PPTX first and obtain its stable Dokki File resource URL.
+- Upload the generated PPTX first and obtain its stable Dokki File resource URL. Use the exact route or resource id returned by Dokki; never synthesize a hostname.
 - Re-run `package` with `--export-url <stable-url>` so the Artifact's Export button points to that file.
 - Create one ordinary HTML Artifact directly from the generated `index.html` with `sandbox_push_artifact`; do not read the large source back through the model, upload it as an HTML File, or use a placeholder variable.
 - Record `sourceSkill=github.com/Dokki-lab/dokki-slides` and the immutable Skill commit as `sourceRevision` on both resources, alongside the same `deckRevision`. After any content change, regenerate and replace both outputs.

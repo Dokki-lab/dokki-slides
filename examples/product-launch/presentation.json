@@ -1,47 +1,164 @@
 {
   "schemaVersion": "dokki-slides@1",
-  "deckRevision": "example-product-launch-v1",
-  "title": "Product Launch Brief",
+  "deckRevision": "dokki-editorial-example-v1",
+  "title": "Dokki Agent OS",
   "locale": "en-US",
   "theme": {
-    "background": "0B1020",
-    "surface": "151C32",
-    "text": "F8FAFC",
-    "muted": "94A3B8",
-    "accent": "635BFF",
+    "style": "dokki-editorial",
+    "background": "F7F8F5",
+    "surface": "FFFFFF",
+    "text": "1A1A1A",
+    "muted": "666666",
+    "accent": "F50132",
+    "line": "D6D7D2",
+    "dark": "050706",
+    "accentOn": "FFFFFF",
     "fontFamily": "Aptos",
-    "fontFamilyCjk": "Noto Sans SC"
+    "fontFamilyCjk": "PingFang SC"
   },
   "slides": [
     {
       "id": "opening",
-      "title": "Product Launch Brief",
-      "notes": "Introduce the product promise and the audience.\n\n[Sources]\n- Internal product brief",
+      "title": "Work should remember why it exists",
+      "layout": "cover-signal",
+      "role": "cover",
+      "intent": "Frame Dokki as the operating memory for agentic work.",
+      "notes": "Open with the category promise. The red rule signals a state change, not decoration.",
       "elements": [
-        { "id": "accent", "type": "shape", "shape": "roundRect", "x": 120, "y": 130, "w": 180, "h": 18, "fill": "635BFF" },
-        { "id": "title", "type": "text", "x": 120, "y": 210, "w": 1450, "h": 260, "text": "Make every decision\nvisible and actionable", "fontSize": 64, "fontWeight": 700, "color": "F8FAFC" },
-        { "id": "subtitle", "type": "text", "x": 125, "y": 590, "w": 1100, "h": 80, "text": "A launch story built once for the web and PowerPoint.", "fontSize": 28, "color": "94A3B8" }
+        { "id": "signal", "type": "shape", "shape": "rect", "x": 120, "y": 190, "w": 28, "h": 670, "fill": "F50132", "decorative": true },
+        { "id": "kicker", "type": "text", "textRole": "label", "x": 190, "y": 176, "w": 700, "h": 40, "text": "DOKKI / AGENT OS", "fontSize": 16, "fontWeight": 600, "color": "F50132" },
+        { "id": "title", "type": "text", "textRole": "display", "primary": true, "x": 190, "y": 245, "w": 1330, "h": 320, "text": "Work should remember\nwhy it exists.", "fontSize": 60, "fontWeight": 300, "lineHeight": 1.02, "color": "1A1A1A" },
+        { "id": "subtitle", "type": "text", "textRole": "lead", "x": 196, "y": 640, "w": 1220, "h": 140, "text": "Turn intent into shared context, governed action, and verifiable outcomes.", "fontSize": 24, "fontWeight": 400, "lineHeight": 1.25, "color": "666666" },
+        { "id": "format", "type": "text", "textRole": "meta", "x": 1320, "y": 830, "w": 480, "h": 44, "text": "ARTIFACT → EDITABLE PPTX", "fontSize": 14, "fontWeight": 600, "align": "right", "color": "666666" }
       ]
     },
     {
-      "id": "traction",
-      "title": "Momentum compounds when the workflow stays connected",
-      "notes": "Explain the three periods and the underlying measurement.\n\n[Sources]\n- Synthetic example data",
+      "id": "thesis",
+      "title": "The workspace becomes the memory",
+      "layout": "statement",
+      "role": "statement",
+      "intent": "Make the distinction between file storage and operating memory memorable.",
+      "notes": "Pause after the first line. The second line is the category distinction.",
       "elements": [
-        { "id": "title", "type": "text", "x": 110, "y": 80, "w": 1620, "h": 100, "text": "Connected workflows compound momentum", "fontSize": 38, "fontWeight": 700 },
-        { "id": "chart", "type": "chart", "chartType": "bar", "x": 120, "y": 240, "w": 1080, "h": 650, "categories": ["Q1", "Q2", "Q3"], "series": [{ "name": "Active teams", "values": [18, 42, 79] }], "colors": ["635BFF"], "showValue": true },
-        { "id": "callout-box", "type": "shape", "shape": "roundRect", "x": 1320, "y": 300, "w": 430, "h": 300, "fill": "151C32", "overlapGroup": "growth-callout" },
-        { "id": "callout-value", "type": "text", "x": 1380, "y": 350, "w": 310, "h": 90, "text": "4.4×", "fontSize": 56, "fontWeight": 700, "color": "635BFF", "align": "center", "overlapGroup": "growth-callout" },
-        { "id": "callout-label", "type": "text", "x": 1370, "y": 470, "w": 330, "h": 100, "text": "growth across three quarters", "fontSize": 22, "color": "94A3B8", "align": "center", "overlapGroup": "growth-callout" }
+        { "id": "marker", "type": "shape", "shape": "rect", "x": 120, "y": 208, "w": 92, "h": 12, "fill": "F50132", "decorative": true },
+        { "id": "statement", "type": "text", "textRole": "display", "primary": true, "x": 120, "y": 270, "w": 1550, "h": 390, "text": "Files store output.\nDokki preserves intent.", "fontSize": 56, "fontWeight": 300, "lineHeight": 1.05, "color": "1A1A1A" },
+        { "id": "proof", "type": "text", "textRole": "lead", "x": 1114, "y": 720, "w": 686, "h": 200, "text": "Every decision keeps its context, owner, evidence, and next action.", "fontSize": 24, "fontWeight": 400, "lineHeight": 1.3, "color": "666666" }
       ]
     },
     {
-      "id": "plan",
-      "title": "Launch sequence",
-      "notes": "Close with owners and next actions.",
+      "id": "gap",
+      "title": "Context breaks at every handoff",
+      "layout": "split",
+      "role": "content",
+      "intent": "Show why disconnected tools make agentic work brittle.",
+      "notes": "The left side states the problem. The right side names the three recurring fractures.",
       "elements": [
-        { "id": "title", "type": "text", "x": 110, "y": 80, "w": 1500, "h": 100, "text": "Three moves turn attention into adoption", "fontSize": 40, "fontWeight": 700 },
-        { "id": "table", "type": "table", "x": 120, "y": 330, "w": 1680, "h": 500, "fontSize": 20, "rows": [["Phase", "Outcome", "Owner"], ["Preview", "Qualified design partners", "Product"], ["Launch", "Clear proof and activation", "GTM"], ["Expand", "Repeatable team rollout", "Customer Success"]] }
+        { "id": "title", "type": "text", "textRole": "title", "primary": true, "x": 120, "y": 150, "w": 1400, "h": 86, "text": "Context breaks at every handoff", "fontSize": 35, "fontWeight": 500, "color": "1A1A1A" },
+        { "id": "divider", "type": "shape", "shape": "rect", "x": 960, "y": 300, "w": 2, "h": 570, "fill": "D6D7D2", "decorative": true },
+        { "id": "left-label", "type": "text", "textRole": "label", "x": 120, "y": 320, "w": 480, "h": 40, "text": "THE COST", "fontSize": 16, "fontWeight": 600, "color": "F50132" },
+        { "id": "left-copy", "type": "text", "textRole": "display", "x": 120, "y": 390, "w": 690, "h": 360, "text": "Agents restart\nfrom fragments.", "fontSize": 50, "fontWeight": 300, "lineHeight": 1.05, "color": "1A1A1A" },
+        { "id": "right-1-label", "type": "text", "textRole": "label", "x": 1114, "y": 320, "w": 230, "h": 34, "text": "01 / IDENTITY", "fontSize": 16, "fontWeight": 600, "color": "1A1A1A" },
+        { "id": "right-1-copy", "type": "text", "textRole": "body", "x": 1114, "y": 366, "w": 610, "h": 92, "text": "The same person, project, or decision appears under different names.", "fontSize": 18, "fontWeight": 400, "lineHeight": 1.25, "color": "666666" },
+        { "id": "right-2-label", "type": "text", "textRole": "label", "x": 1114, "y": 505, "w": 250, "h": 34, "text": "02 / TIME", "fontSize": 16, "fontWeight": 600, "color": "1A1A1A" },
+        { "id": "right-2-copy", "type": "text", "textRole": "body", "x": 1114, "y": 551, "w": 610, "h": 92, "text": "The latest state survives; the reason a choice changed does not.", "fontSize": 18, "fontWeight": 400, "lineHeight": 1.25, "color": "666666" },
+        { "id": "right-3-label", "type": "text", "textRole": "label", "x": 1114, "y": 690, "w": 280, "h": 34, "text": "03 / AUTHORITY", "fontSize": 16, "fontWeight": 600, "color": "1A1A1A" },
+        { "id": "right-3-copy", "type": "text", "textRole": "body", "x": 1114, "y": 736, "w": 610, "h": 92, "text": "A recommendation and an approved action look indistinguishable.", "fontSize": 18, "fontWeight": 400, "lineHeight": 1.25, "color": "666666" }
+      ]
+    },
+    {
+      "id": "leverage",
+      "title": "One context layer removes duplicate work",
+      "layout": "data-hero",
+      "role": "data",
+      "intent": "Use one illustrative metric to show the leverage of shared context.",
+      "notes": "Illustrative product-story data, not a measured customer claim. Replace with sourced values in a real deck.\n\n[Sources]\n- Illustrative example data",
+      "elements": [
+        { "id": "title", "type": "text", "textRole": "title", "x": 120, "y": 150, "w": 1680, "h": 96, "text": "One context layer removes duplicate work", "fontSize": 35, "fontWeight": 500, "color": "1A1A1A" },
+        { "id": "kpi", "type": "text", "textRole": "kpi", "primary": true, "x": 120, "y": 310, "w": 620, "h": 190, "text": "2×", "fontSize": 72, "fontWeight": 300, "color": "F50132" },
+        { "id": "kpi-label", "type": "text", "textRole": "lead", "x": 125, "y": 520, "w": 600, "h": 140, "text": "fewer context handoffs\nin an illustrative workflow", "fontSize": 24, "fontWeight": 400, "lineHeight": 1.25, "color": "666666" },
+        { "id": "baseline", "type": "text", "textRole": "label", "x": 830, "y": 330, "w": 380, "h": 36, "text": "CONTEXT RETAINED", "fontSize": 16, "fontWeight": 600, "color": "1A1A1A" },
+        { "id": "chart", "type": "chart", "chartType": "bar", "x": 830, "y": 400, "w": 970, "h": 410, "categories": ["Files", "Connected tools", "Dokki"], "series": [{ "name": "Context retained", "values": [28, 54, 91] }], "colors": ["D6D7D2", "666666", "F50132"], "showValue": true },
+        { "id": "source", "type": "text", "textRole": "footnote", "x": 830, "y": 840, "w": 970, "h": 38, "text": "Illustrative model — replace with sourced data before external use.", "fontSize": 14, "fontWeight": 400, "color": "666666" }
+      ]
+    },
+    {
+      "id": "shift",
+      "title": "The operating model changes",
+      "layout": "comparison",
+      "role": "content",
+      "intent": "Contrast a tool-centric workflow with an intent-centric Dokki workflow.",
+      "notes": "Read across each row. Emphasize that governance stays visible.",
+      "elements": [
+        { "id": "title", "type": "text", "textRole": "title", "primary": true, "x": 120, "y": 150, "w": 1250, "h": 86, "text": "The operating model changes", "fontSize": 35, "fontWeight": 500, "color": "1A1A1A" },
+        { "id": "divider", "type": "shape", "shape": "rect", "x": 960, "y": 290, "w": 2, "h": 590, "fill": "D6D7D2", "decorative": true },
+        { "id": "before-label", "type": "text", "textRole": "label", "x": 120, "y": 300, "w": 480, "h": 46, "text": "BEFORE / TOOL-CENTRIC", "fontSize": 16, "fontWeight": 600, "color": "666666" },
+        { "id": "after-label", "type": "text", "textRole": "label", "x": 1114, "y": 300, "w": 600, "h": 46, "text": "WITH DOKKI / INTENT-CENTRIC", "fontSize": 16, "fontWeight": 600, "color": "F50132" },
+        { "id": "before-1", "type": "text", "textRole": "lead", "x": 120, "y": 400, "w": 690, "h": 70, "text": "Search for the latest file", "fontSize": 24, "fontWeight": 400, "color": "1A1A1A" },
+        { "id": "before-2", "type": "text", "textRole": "lead", "x": 120, "y": 555, "w": 690, "h": 70, "text": "Reconstruct the decision", "fontSize": 24, "fontWeight": 400, "color": "1A1A1A" },
+        { "id": "before-3", "type": "text", "textRole": "lead", "x": 120, "y": 710, "w": 690, "h": 70, "text": "Trust the handoff", "fontSize": 24, "fontWeight": 400, "color": "1A1A1A" },
+        { "id": "after-1", "type": "text", "textRole": "lead", "x": 1114, "y": 400, "w": 620, "h": 70, "text": "Retrieve the governed context", "fontSize": 24, "fontWeight": 500, "color": "1A1A1A" },
+        { "id": "after-2", "type": "text", "textRole": "lead", "x": 1114, "y": 555, "w": 620, "h": 70, "text": "See why the state changed", "fontSize": 24, "fontWeight": 500, "color": "1A1A1A" },
+        { "id": "after-3", "type": "text", "textRole": "lead", "x": 1114, "y": 710, "w": 620, "h": 70, "text": "Verify before the action", "fontSize": 24, "fontWeight": 500, "color": "1A1A1A" }
+      ]
+    },
+    {
+      "id": "loop",
+      "title": "Intent becomes a verifiable loop",
+      "layout": "process",
+      "role": "content",
+      "intent": "Explain the four-step operating loop in one scan.",
+      "notes": "The signal step is Delegate: the moment intent becomes bounded action.",
+      "elements": [
+        { "id": "title", "type": "text", "textRole": "title", "primary": true, "x": 120, "y": 150, "w": 1350, "h": 86, "text": "Intent becomes a verifiable loop", "fontSize": 35, "fontWeight": 500, "color": "1A1A1A" },
+        { "id": "rail", "type": "shape", "shape": "rect", "x": 210, "y": 485, "w": 1450, "h": 3, "fill": "D6D7D2", "decorative": true },
+        { "id": "n1", "type": "shape", "shape": "ellipse", "x": 230, "y": 451, "w": 70, "h": 70, "fill": "1A1A1A", "decorative": true },
+        { "id": "n2", "type": "shape", "shape": "ellipse", "x": 680, "y": 451, "w": 70, "h": 70, "fill": "1A1A1A", "decorative": true },
+        { "id": "n3", "type": "shape", "shape": "ellipse", "x": 1130, "y": 451, "w": 70, "h": 70, "fill": "F50132", "decorative": true },
+        { "id": "n4", "type": "shape", "shape": "ellipse", "x": 1580, "y": 451, "w": 70, "h": 70, "fill": "1A1A1A", "decorative": true },
+        { "id": "s1", "type": "text", "textRole": "label", "x": 120, "y": 350, "w": 300, "h": 36, "text": "01 / CAPTURE", "fontSize": 16, "fontWeight": 600, "align": "center", "color": "1A1A1A" },
+        { "id": "s1b", "type": "text", "textRole": "body", "x": 120, "y": 570, "w": 300, "h": 140, "text": "Bind the goal to its source and owner.", "fontSize": 18, "fontWeight": 400, "align": "center", "lineHeight": 1.25, "color": "666666" },
+        { "id": "s2", "type": "text", "textRole": "label", "x": 570, "y": 350, "w": 300, "h": 36, "text": "02 / DECIDE", "fontSize": 16, "fontWeight": 600, "align": "center", "color": "1A1A1A" },
+        { "id": "s2b", "type": "text", "textRole": "body", "x": 570, "y": 570, "w": 300, "h": 140, "text": "Preserve alternatives, evidence, and authority.", "fontSize": 18, "fontWeight": 400, "align": "center", "lineHeight": 1.25, "color": "666666" },
+        { "id": "s3", "type": "text", "textRole": "label", "x": 1020, "y": 350, "w": 300, "h": 36, "text": "03 / DELEGATE", "fontSize": 16, "fontWeight": 600, "align": "center", "color": "F50132" },
+        { "id": "s3b", "type": "text", "textRole": "body", "x": 1020, "y": 570, "w": 300, "h": 140, "text": "Give agents a bounded, inspectable action.", "fontSize": 18, "fontWeight": 400, "align": "center", "lineHeight": 1.25, "color": "666666" },
+        { "id": "s4", "type": "text", "textRole": "label", "x": 1470, "y": 350, "w": 300, "h": 36, "text": "04 / VERIFY", "fontSize": 16, "fontWeight": 600, "align": "center", "color": "1A1A1A" },
+        { "id": "s4b", "type": "text", "textRole": "body", "x": 1470, "y": 570, "w": 300, "h": 140, "text": "Return proof to the same operating memory.", "fontSize": 18, "fontWeight": 400, "align": "center", "lineHeight": 1.25, "color": "666666" }
+      ]
+    },
+    {
+      "id": "system",
+      "title": "One system, three visible layers",
+      "layout": "architecture",
+      "role": "content",
+      "intent": "Show how memory, agents, and artifacts compose into an operating system.",
+      "notes": "Read bottom-up: memory grounds agents; agents produce visible artifacts and actions.",
+      "elements": [
+        { "id": "title", "type": "text", "textRole": "title", "primary": true, "x": 120, "y": 150, "w": 1350, "h": 86, "text": "One system, three visible layers", "fontSize": 35, "fontWeight": 500, "color": "1A1A1A" },
+        { "id": "layer-1", "type": "shape", "shape": "rect", "x": 120, "y": 300, "w": 1680, "h": 150, "fill": "050706", "decorative": true },
+        { "id": "layer-2", "type": "shape", "shape": "rect", "x": 120, "y": 470, "w": 1680, "h": 150, "fill": "FFFFFF", "lineColor": "D6D7D2", "lineWidth": 1, "decorative": true },
+        { "id": "layer-3", "type": "shape", "shape": "rect", "x": 120, "y": 640, "w": 1680, "h": 150, "fill": "F50132", "decorative": true },
+        { "id": "l1-label", "type": "text", "textRole": "label", "x": 160, "y": 340, "w": 470, "h": 42, "text": "01 / OPERATING MEMORY", "fontSize": 16, "fontWeight": 600, "color": "FFFFFF" },
+        { "id": "l1-copy", "type": "text", "textRole": "lead", "x": 690, "y": 332, "w": 980, "h": 70, "text": "Identity · time · provenance · permissions", "fontSize": 24, "fontWeight": 400, "color": "FFFFFF" },
+        { "id": "l2-label", "type": "text", "textRole": "label", "x": 160, "y": 510, "w": 300, "h": 34, "text": "02 / AGENTS", "fontSize": 16, "fontWeight": 600, "color": "1A1A1A" },
+        { "id": "l2-copy", "type": "text", "textRole": "lead", "x": 690, "y": 502, "w": 980, "h": 70, "text": "Retrieve · reason · act · verify", "fontSize": 24, "fontWeight": 400, "color": "1A1A1A" },
+        { "id": "l3-label", "type": "text", "textRole": "label", "x": 160, "y": 680, "w": 300, "h": 34, "text": "03 / ARTIFACTS", "fontSize": 16, "fontWeight": 600, "color": "FFFFFF" },
+        { "id": "l3-copy", "type": "text", "textRole": "lead", "x": 690, "y": 672, "w": 980, "h": 70, "text": "Documents · data · slides · actions", "fontSize": 24, "fontWeight": 500, "color": "FFFFFF" }
+      ]
+    },
+    {
+      "id": "close",
+      "title": "Make the next action remember the last decision",
+      "layout": "closing-split",
+      "role": "closing",
+      "intent": "End with one concrete product promise and action.",
+      "notes": "Close on the action: start with one governed workflow and preserve its full loop.",
+      "elements": [
+        { "id": "dark-field", "type": "shape", "shape": "rect", "x": 0, "y": 110, "w": 1114, "h": 970, "fill": "050706", "decorative": true },
+        { "id": "kicker", "type": "text", "textRole": "label", "x": 120, "y": 210, "w": 650, "h": 38, "text": "THE NEXT MOVE", "fontSize": 16, "fontWeight": 600, "color": "F50132" },
+        { "id": "close-title", "type": "text", "textRole": "display", "primary": true, "x": 120, "y": 300, "w": 860, "h": 480, "text": "Make the next action\nremember the last decision.", "fontSize": 50, "fontWeight": 300, "lineHeight": 1.06, "color": "FFFFFF" },
+        { "id": "action-label", "type": "text", "textRole": "label", "x": 1256, "y": 300, "w": 420, "h": 38, "text": "START SMALL", "fontSize": 16, "fontWeight": 600, "color": "F50132" },
+        { "id": "action", "type": "text", "textRole": "title", "x": 1256, "y": 385, "w": 480, "h": 230, "text": "Choose one governed workflow.", "fontSize": 35, "fontWeight": 500, "lineHeight": 1.12, "color": "1A1A1A" },
+        { "id": "action-copy", "type": "text", "textRole": "body", "x": 1256, "y": 660, "w": 480, "h": 180, "text": "Capture its intent, delegate the action, and return proof to the same context.", "fontSize": 18, "fontWeight": 400, "lineHeight": 1.35, "color": "666666" }
       ]
     }
   ]

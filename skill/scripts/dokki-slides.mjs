@@ -21,6 +21,23 @@ function option(args, name, fallback) {
   return index >= 0 ? args[index + 1] : fallback
 }
 
+async function copyLocalAssets(deck, baseDir, outDir) {
+  const assets = new Set()
+  for (const slide of deck.slides) {
+    for (const element of slide.elements) {
+      const asset = element.type === "image" ? element.src : element.type === "html" ? element.fallbackImage : null
+      if (typeof asset === "string" && !/^(data:|https?:)/.test(asset)) assets.add(asset)
+    }
+  }
+  for (const asset of assets) {
+    const source = path.resolve(baseDir, asset)
+    const destination = path.resolve(outDir, asset)
+    await fs.mkdir(path.dirname(destination), { recursive: true })
+    await fs.copyFile(source, destination)
+  }
+  return [...assets].sort()
+}
+
 async function main() {
   const [, , command, file, ...args] = process.argv
   if (!command || command === "help" || command === "--help") return usage()
@@ -54,9 +71,10 @@ async function main() {
     const htmlFile = path.join(outDir, "index.html")
     await fs.mkdir(outDir, { recursive: true })
     await fs.copyFile(path.resolve(file), path.join(outDir, "presentation.json"))
+    const assets = await copyLocalAssets(deck, baseDir, outDir)
     await writePptx(deck, pptxFile, { baseDir })
     await writeHtml(deck, htmlFile, { baseDir, exportUrl: option(args, "--export-url", `exports/${slug}.pptx`) })
-    const quality = { protocol: "dokki-slides@1", deckRevision: deck.deckRevision, digest: deckDigest(deck), slideCount: deck.slides.length, warnings: report.warnings, outputs: { html: "index.html", pptx: `exports/${slug}.pptx` } }
+    const quality = { protocol: "dokki-slides@1", designSystem: deck.theme.style || "custom", deckRevision: deck.deckRevision, digest: deckDigest(deck), slideCount: deck.slides.length, layouts: deck.slides.map((slide) => slide.layout || "custom"), assets, warnings: report.warnings, outputs: { html: "index.html", pptx: `exports/${slug}.pptx` } }
     await fs.writeFile(path.join(outDir, "quality-report.json"), JSON.stringify(quality, null, 2) + "\n")
     console.log(JSON.stringify({ ok: true, outDir, ...quality }, null, 2))
     return
@@ -68,4 +86,3 @@ main().catch((error) => {
   console.error(error instanceof Error ? error.message : String(error))
   process.exitCode = 1
 })
-

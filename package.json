@@ -1,6 +1,6 @@
 {
   "name": "dokki-slides",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Open-source AI presentation skill for Dokki, Claude Code, Codex and OpenClaw. Create interactive web slides and export editable PPTX.",
   "type": "module",
   "license": "MIT-0",

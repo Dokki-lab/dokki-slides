@@ -19,6 +19,6 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm build:vendor
-      - run: git diff --exit-code -- skill/scripts/vendor/pptxgenjs.mjs
+      - run: git diff --exit-code -- dokki-slides/scripts/vendor/pptxgenjs.mjs
       - run: pnpm test
       - run: pnpm build:example

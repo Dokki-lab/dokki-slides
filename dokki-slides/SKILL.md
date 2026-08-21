@@ -4,7 +4,7 @@ description: Create or revise interactive web slide decks and export editable PP
 license: LICENSE
 metadata:
   author: Dokki
-  version: "1.0.3"
+  version: "1.1.0"
   protocol: dokki-slides@1
 ---
 
@@ -23,12 +23,14 @@ Requires Node.js 18+ for validation and PPTX export. Dokki mode additionally nee
 
 ## Author
 
-1. Read [the content and visual guidance](references/design.md).
-2. Read [the schema contract](references/schema.md) before writing `presentation.json`.
-3. Keep audience-facing text concise. Put sources and talk tracks in speaker notes, not on the canvas.
-4. Use native `text`, `shape`, `image`, `table`, and `chart` elements whenever the object should remain editable in PowerPoint.
-5. Use `html` only for web-specific composition. Every `html` element must provide `fallbackImage` before PPTX export.
-6. Store assets beside the deck. Do not depend on temporary signed URLs or unpinned remote scripts.
+1. Read [the Dokki editorial design contract](references/design.md).
+2. Read [the named layout system](references/layouts.md), then select silhouettes from the information relationship—not decoration.
+3. Read [the schema contract](references/schema.md) before writing `presentation.json`.
+4. For new Dokki decks, use `theme.style: "dokki-editorial"`, the exact Dokki tokens, one `intent`, and exactly one `primary` element per slide.
+5. Keep audience-facing text concise. Put sources and talk tracks in speaker notes, not on the canvas.
+6. Use native `text`, `shape`, `image`, `table`, and `chart` elements whenever the object should remain editable in PowerPoint.
+7. Use `html` only for web-specific composition. Every `html` element must provide `fallbackImage` before PPTX export.
+8. Store assets beside the deck. Do not depend on temporary signed URLs or unpinned remote scripts.
 
 ## Build and verify
 
@@ -39,7 +41,7 @@ node scripts/dokki-slides.mjs validate /absolute/path/presentation.json
 node scripts/dokki-slides.mjs package /absolute/path/presentation.json --out-dir /absolute/path/output
 ```
 
-`package` writes `presentation.json`, `index.html`, `exports/<slug>.pptx`, and `quality-report.json`. Do not report success if validation fails. Inspect every slide in the HTML output at desktop and a narrow portrait viewport, then open or render the PPTX before delivery. Fix unintended overlap, clipping, small text, missing assets, and fallback warnings.
+`package` writes `presentation.json`, `index.html`, `exports/<slug>.pptx`, and `quality-report.json`. Do not report success if validation fails. Read and perform [the rendered quality review](references/quality.md): inspect every slide in HTML at desktop and a narrow portrait viewport, then open or render every PPTX page. Fix P0 defects and polish P1 findings before delivery.
 
 ## Publish to Dokki
 

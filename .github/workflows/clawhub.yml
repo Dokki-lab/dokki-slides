@@ -13,14 +13,14 @@ jobs:
     if: github.event_name == 'pull_request'
     uses: openclaw/clawhub/.github/workflows/skill-publish.yml@v0.23.3
     with:
-      skill_path: ./skill
+      skill_path: ./
       owner: dokki-lab
       dry_run: true
   publish:
     if: github.event_name == 'workflow_dispatch'
     uses: openclaw/clawhub/.github/workflows/skill-publish.yml@v0.23.3
     with:
-      skill_path: ./skill
+      skill_path: ./
       owner: dokki-lab
       dry_run: false
     secrets:

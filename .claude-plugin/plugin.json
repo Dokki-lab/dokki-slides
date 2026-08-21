@@ -10,5 +10,5 @@
   "homepage": "https://github.com/Dokki-lab/dokki-slides",
   "repository": "https://github.com/Dokki-lab/dokki-slides",
   "license": "MIT-0",
-  "skills": "./skill"
+  "skills": "./"
 }

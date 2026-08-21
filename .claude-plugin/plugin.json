@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "dokki-slides",
   "displayName": "Dokki Slides",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Create Dokki-styled interactive slides and export editable PPTX files.",
   "author": {
     "name": "Dokki"

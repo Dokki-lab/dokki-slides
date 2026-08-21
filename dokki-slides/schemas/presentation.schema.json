@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/Dokki-lab/dokki-slides/blob/main/schemas/presentation.schema.json",
+  "$id": "https://github.com/Dokki-lab/dokki-slides/blob/main/dokki-slides/schemas/presentation.schema.json",
   "title": "Dokki Slides presentation",
   "type": "object",
   "required": ["schemaVersion", "deckRevision", "title", "locale", "theme", "slides"],

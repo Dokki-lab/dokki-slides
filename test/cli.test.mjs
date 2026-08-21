@@ -5,12 +5,12 @@ import path from "node:path"
 import test from "node:test"
 import { execFile } from "node:child_process"
 import { promisify } from "node:util"
-import { validateDeck } from "../scripts/lib/model.mjs"
-import { renderHtml } from "../scripts/lib/render-html.mjs"
+import { validateDeck } from "../dokki-slides/scripts/lib/model.mjs"
+import { renderHtml } from "../dokki-slides/scripts/lib/render-html.mjs"
 
 const exec = promisify(execFile)
 const root = path.resolve(import.meta.dirname, "..")
-const cli = path.join(root, "scripts", "dokki-slides.mjs")
+const cli = path.join(root, "dokki-slides", "scripts", "dokki-slides.mjs")
 const example = path.join(root, "examples", "product-launch", "presentation.json")
 
 test("validates the example deck", async () => {
@@ -91,10 +91,10 @@ test("rejects editorial text boxes that are likely to clip in HTML", async () =>
 
 test("keeps package, Dokki, and Claude marketplace versions aligned", async () => {
   const packageJson = JSON.parse(await fs.readFile(path.join(root, "package.json"), "utf8"))
-  const dokkiManifest = JSON.parse(await fs.readFile(path.join(root, "dokki.skill.json"), "utf8"))
+  const dokkiManifest = JSON.parse(await fs.readFile(path.join(root, "dokki-slides", "dokki.skill.json"), "utf8"))
   const claudePlugin = JSON.parse(await fs.readFile(path.join(root, ".claude-plugin", "plugin.json"), "utf8"))
   const claudeMarketplace = JSON.parse(await fs.readFile(path.join(root, ".claude-plugin", "marketplace.json"), "utf8"))
-  const skill = await fs.readFile(path.join(root, "SKILL.md"), "utf8")
+  const skill = await fs.readFile(path.join(root, "dokki-slides", "SKILL.md"), "utf8")
   assert.equal(dokkiManifest.version, packageJson.version)
   assert.equal(claudePlugin.version, packageJson.version)
   assert.equal(claudeMarketplace.version, packageJson.version)

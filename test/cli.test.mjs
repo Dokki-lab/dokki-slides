@@ -121,6 +121,9 @@ test("publishes Dokki decks through first-class Slide mode without generic Artif
   assert.match(dokki, /resource\.artifact_variant = "slide"/)
   assert.match(dokki, /must not be published at `\/artifact\/<resource-id>`/)
   assert.match(dokki, /Do not fall back to a generic Artifact/)
+  assert.match(dokki, /reserves `metadata\.kind=artifact_variant`/)
+  assert.match(dokki, /metadata\.artifactVariant\.type=slide/)
+  assert.doesNotMatch(dokki, /metadata object containing `kind=dokki-slides`/)
 })
 
 test("packages local assets and rejects paths outside the deck directory", async () => {

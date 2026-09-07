@@ -4,7 +4,7 @@ description: Create or revise interactive web slide decks and export editable PP
 license: LICENSE
 metadata:
   author: Dokki
-  version: "1.1.1"
+  version: "1.1.2"
   protocol: dokki-slides@1
 ---
 
@@ -12,13 +12,13 @@ metadata:
 
 Build one canonical deck and publish it as both an interactive HTML presentation and an editable PPTX. The canonical input is `presentation.json`; never maintain separate slide content for the web and PowerPoint outputs.
 
-Requires Node.js 18+ for validation and PPTX export. Dokki mode additionally needs Artifact creation and file upload capabilities. Local assets require no secrets or network access.
+Requires Node.js 18+ for validation and PPTX export. Dokki mode additionally needs Slide creation and file upload capabilities. Local assets require no secrets or network access.
 
 ## Route the task
 
 - For a new deck or a substantial rewrite, establish the topic, audience, purpose, and source material before drafting.
 - For a targeted revision, preserve the existing deck's narrative, theme, stable slide IDs, and output location unless the user requests broader changes.
-- In Dokki, create a normal HTML Artifact plus a companion PPTX File. On other platforms, create `index.html`, `presentation.json`, `assets/`, and `exports/<name>.pptx` locally.
+- In Dokki, create a first-class Slide (`artifact_variant: "slide"`) plus a companion PPTX File. On other platforms, create `index.html`, `presentation.json`, `assets/`, and `exports/<name>.pptx` locally.
 - Existing PPTX import and high-fidelity round trips are out of scope for v1. Explain that boundary instead of flattening an uploaded deck silently.
 
 ## Author
@@ -50,8 +50,10 @@ Keep execution progress phase-level: author, build, rendered review, and publish
 Read [the Dokki publishing contract](references/dokki.md) only when Dokki tools are available.
 
 - Upload the generated PPTX first and obtain its stable Dokki File resource URL. Use the exact route or resource id returned by Dokki; never synthesize a hostname.
-- Re-run `package` with `--export-url <stable-url>` so the Artifact's Export button points to that file.
-- Create one ordinary HTML Artifact directly from the generated `index.html` with `sandbox_push_artifact`; do not read the large source back through the model, upload it as an HTML File, or use a placeholder variable.
+- Re-run `package` with `--export-url <stable-url>` so the Slide's Export button points to that file.
+- Create one first-class Slide directly from the generated `index.html` with `sandbox_push_artifact`, passing `artifact_variant: "slide"`; do not read the large source back through the model, upload it as an HTML File, or use a placeholder variable.
+- Verify the create result reports `artifact_variant: "slide"` and resolves to Dokki's Slide route (`/slide/<resource-id>`). A generic `/artifact/<resource-id>` result is a publication defect, not a successful Slide delivery.
+- If the runtime's `sandbox_push_artifact` does not accept `artifact_variant`, stop and report that this Dokki runtime is incompatible. Never silently fall back to a generic Artifact.
 - Record `sourceSkill=github.com/Dokki-lab/dokki-slides` and the immutable Skill commit as `sourceRevision` on both resources, alongside the same `deckRevision`. After any content change, regenerate and replace both outputs.
 - Return links to both the Artifact and the companion File.
 

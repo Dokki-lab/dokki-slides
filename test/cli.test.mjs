@@ -112,6 +112,17 @@ test("keeps Dokki publication environment-safe and progress concise", async () =
   assert.match(dokki, /do not expose each internal sandbox retry/)
 })
 
+test("publishes Dokki decks through first-class Slide mode without generic Artifact fallback", async () => {
+  const skill = await fs.readFile(path.join(root, "dokki-slides", "SKILL.md"), "utf8")
+  const dokki = await fs.readFile(path.join(root, "dokki-slides", "references", "dokki.md"), "utf8")
+  assert.match(skill, /artifact_variant: "slide"/)
+  assert.match(skill, /\/slide\/<resource-id>/)
+  assert.match(skill, /Never silently fall back to a generic Artifact/)
+  assert.match(dokki, /resource\.artifact_variant = "slide"/)
+  assert.match(dokki, /must not be published at `\/artifact\/<resource-id>`/)
+  assert.match(dokki, /Do not fall back to a generic Artifact/)
+})
+
 test("packages local assets and rejects paths outside the deck directory", async () => {
   const source = await fs.mkdtemp(path.join(os.tmpdir(), "dokki-slides-assets-"))
   await fs.mkdir(path.join(source, "assets"))

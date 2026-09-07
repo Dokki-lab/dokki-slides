@@ -4,7 +4,7 @@ description: Create or revise interactive web slide decks and export editable PP
 license: LICENSE
 metadata:
   author: Dokki
-  version: "1.1.2"
+  version: "1.1.3"
   protocol: dokki-slides@1
 ---
 

@@ -1,24 +1,19 @@
-name: CI
-
+name: test
 on:
-  pull_request:
   push:
     branches: [main]
+  pull_request:
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build:vendor
-      - run: git diff --exit-code -- dokki-slides/scripts/vendor/pptxgenjs.mjs
-      - run: pnpm test
-      - run: pnpm build:example
+      # v2 has no dependencies: the skill runs on the vendored core bundle.
+      - run: node --test
+      - run: node dokki-slides/scripts/dokki-slides.mjs check examples/angel-round/deck.json
+      - run: node dokki-slides/scripts/dokki-slides.mjs package examples/angel-round/deck.json --out-dir dist/angel-round

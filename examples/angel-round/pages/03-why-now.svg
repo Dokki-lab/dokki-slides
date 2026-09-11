@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<rect id="bg" x="0" y="0" width="1920" height="1080" fill="#F7F8F5" data-name="Background" data-locked/>
+<text x="120" y="100" font-size="28" font-weight="600" fill="#F50132" data-box="120 68 1100 44" data-name="Kicker" letter-spacing="2">WHY NOW</text>
+<text x="120" y="204.0" font-size="60" font-weight="500" fill="#1A1A1A" data-box="120 150 1680 69" data-name="Title" letter-spacing="-1">Agent 已经是新的工作执行者；工作环境还是为人设计的。</text>
+<g data-group data-name="Column 1">
+<rect x="120" y="300" width="520" height="4" fill="#1A1A1A" data-name="Rule 1"/>
+<text x="120" y="343.4" font-size="28" font-weight="600" fill="#F50132" data-box="120 320 80 40" data-name="Index 1" data-line-height="1.4">01</text>
+<text x="120" y="404.4" font-size="36" font-weight="600" fill="#1A1A1A" data-box="120 372 520 60" data-name="Heading 1" data-line-height="1.4">协议到位了</text>
+<text x="120" y="473.4" font-size="26" fill="#1A1A1A" data-box="120 450 520 300" data-name="Evidence 1" data-line-height="1.5"><tspan x="120" dy="0">MCP 月度 SDK 下载 9,700 万次（2026-03）</tspan><tspan x="120" dy="39.0">注册表 9,652 个 MCP 服务（2026-05）</tspan><tspan x="120" dy="39.0">2025-12 捐给 Linux 基金会，OpenAI / Google / Microsoft 已支持</tspan></text>
+</g>
+<g data-group data-name="Column 2">
+<rect x="688" y="300" width="520" height="4" fill="#1A1A1A" data-name="Rule 2"/>
+<text x="688" y="343.4" font-size="28" font-weight="600" fill="#F50132" data-box="688 320 80 40" data-name="Index 2" data-line-height="1.4">02</text>
+<text x="688" y="404.4" font-size="36" font-weight="600" fill="#1A1A1A" data-box="688 372 520 60" data-name="Heading 2" data-line-height="1.4">企业开始上，但落不了地</text>
+<text x="688" y="473.4" font-size="26" fill="#1A1A1A" data-box="688 450 520 300" data-name="Evidence 2" data-line-height="1.5"><tspan x="688" dy="0">88% 的企业已经在用 AI</tspan><tspan x="688" dy="39.0">只有 &lt;10% 在任一职能真正部署了 Agent</tspan><tspan x="688" dy="39.0">（McKinsey State of AI，2025-11）</tspan></text>
+</g>
+<g data-group data-name="Column 3">
+<rect x="1256" y="300" width="520" height="4" fill="#1A1A1A" data-name="Rule 3"/>
+<text x="1256" y="343.4" font-size="28" font-weight="600" fill="#F50132" data-box="1256 320 80 40" data-name="Index 3" data-line-height="1.4">03</text>
+<text x="1256" y="404.4" font-size="36" font-weight="600" fill="#1A1A1A" data-box="1256 372 520 60" data-name="Heading 3" data-line-height="1.4">应用形态正在换代</text>
+<text x="1256" y="473.4" font-size="26" fill="#1A1A1A" data-box="1256 450 520 300" data-name="Evidence 3" data-line-height="1.5"><tspan x="1256" dy="0">2026 年底 40% 的企业应用将内置任务型 Agent，2025 年不到 5%（Gartner）</tspan><tspan x="1256" dy="39.0">&gt;40% 的 Agent 项目会在 2027 前被取消：ROI 不清、控制不足</tspan></text>
+</g>
+<rect x="120" y="790" width="1680" height="2" fill="#D6D7D2" data-name="Rule"/>
+<text x="120" y="847.0" font-size="30" font-weight="400" fill="#1A1A1A" data-box="120 820 1680 140" data-name="Takeaway" data-line-height="1.45">瓶颈从「模型够不够聪明」转到了「Agent 在哪干活、带着什么上下文、谁来管」。这一层今天是空的：Notion、Confluence、飞书的协作引擎都建于 AI 时代之前，Agent 是后来贴上去的侧边栏。</text>
+<text x="120" y="1024" font-size="24" fill="#666666" data-box="120 992 1250 40" data-name="Footer">Dokki · 天使轮 · 2026-09 · 保密</text><text x="1800" y="1024" font-size="24" fill="#666666" text-anchor="end" data-box="1540 992 260 40" data-name="Page">03</text>
+</svg>

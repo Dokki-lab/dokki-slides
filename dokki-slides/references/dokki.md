@@ -1,17 +1,11 @@
-# Dokki publishing contract
+# Publishing to Dokki
 
-Dokki Slides publishes the web deck through Dokki's first-class Slide mode. A Slide is an Artifact variant with `artifact_variant: "slide"`, a stable `/slide/<resource-id>` route, and the Slide-specific workspace identity. It is not a generic Artifact and must not be published at `/artifact/<resource-id>`.
+A native deck is a Dokki **Slide** (`artifact_variant: "slide"`) whose source is the derived `index.html` — it carries the marker `<!-- dokki-slide-canvas@1 -->` and the deck snapshot, so Dokki opens it in the canvas editor and seeds the scene graph from it.
 
-1. Package the deck locally and record its `deckRevision`.
-2. Upload `exports/<slug>.pptx` as a Dokki File with metadata containing `kind=dokki-slides-export`, `protocol=dokki-slides@1`, `sourceSkill=github.com/Dokki-lab/dokki-slides`, `sourceRevision=<immutable Skill commit>`, and the same `deckRevision`. Pass the complete non-empty metadata object in the upload call; do not send `{}` as a placeholder.
-3. Obtain the stable File resource route, not a short-lived signed download URL. Prefer the platform-native `resource://<resource-id>` route for the Slide export target when Dokki returns only a resource id. Never invent, normalize, or replace the current host (for example, never turn a Staging resource into a `dokki.one` URL).
-4. Package again with that route as `--export-url`.
-5. Call `sandbox_push_artifact` with the absolute `index.html` path, `artifact_variant: "slide"`, and a complete producer metadata object containing `protocol`, `sourceSkill`, `sourceRevision`, `deckRevision`, and the companion File resource id. Do not pass `kind=dokki-slides`: Dokki reserves `metadata.kind=artifact_variant` for first-class Slide identity and merges the producer fields beside it. This transfers the complete source server-side while preserving Slide mode. Do not call `sandbox_read_file` to move HTML through model context, upload `index.html` as a File, pass a placeholder such as `THE_ACTUAL_HTML_SOURCE`, or retry `create_artifact` with unchanged arguments.
-6. Verify the creation response reports `resource.artifact_variant = "slide"`. Read the Slide back and require `metadata.kind=artifact_variant`, `metadata.artifactVariant.type=slide`, and the canonical route `/slide/<resource-id>`. Treat a generic `/artifact/<resource-id>` route as a failed publication even when the HTML renders.
-7. Read the companion File back. The Slide and File revisions must match before returning success.
+1. `node scripts/dokki-slides.mjs package deck.json --out-dir dist` — stop if `lint.ok` is false.
+2. Create the Slide with the `create` facade (`action: "artifact"`, `artifact_variant: "slide"`, `source: <contents of dist/index.html>`, `name`, `workspace_id`, optional `metadata: { producer: "dokki-slides@2", core: <quality-report core> }`). In a sandbox, push `dist/index.html` with `sandbox_push_artifact` and `artifact_variant: "slide"` instead of reading it back through the model.
+3. Verify the response reports `artifact_variant: "slide"` and a `/slide/<resource-id>` route. A generic `/artifact/…` route is a defect: stop and report it.
+4. Read it back with `slides_read` (facade `read`, `action: "slides"`): it returns the slides, elements, `lint` and `state_hash`. From here on, revise with `slides_update` (`action: "slides.update"`): `ops` for edits, `add_slides:[{layout, content}]` or `add_slides:[{svg}]` for new pages, `validate_only: true` to preflight. Do not `artifact_update` a native deck — the HTML is derived and the write is refused.
+5. PPTX: the Slide's Export button (`POST /api/slides/export`) builds it from the live deck; do not ship a separate PPTX file.
 
-If `sandbox_push_artifact` is unavailable or its schema does not accept `artifact_variant`, report that Slide-mode publication is unsupported by this Dokki runtime. Do not fall back to a generic Artifact: that would hide a platform compatibility defect and make the result invisible to Slide-specific navigation and behavior.
-
-Return only exact links supplied by the Dokki tools or the current app. If a tool returns only a resource id, return the id with a clear label rather than constructing an HTTPS URL. Keep progress updates to the four delivery phases; aggregate recoverable local validation corrections and do not expose each internal sandbox retry as a separate user-facing error.
-
-When updating, never replace only one side. If one write fails, report the partial state and retry safely using the same revision rather than inventing a newer revision. Stop after one failed metadata retry: the HTML and PPTX remain usable, but the run must report metadata verification as incomplete instead of looping. Never repeat a tool call with an unchanged argument object.
+Return only the links Dokki gave you. When a write fails, report the partial state and retry with the state hash from a fresh `slides_read`; never repeat a call with unchanged arguments.

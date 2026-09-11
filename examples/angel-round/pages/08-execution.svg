@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<rect id="bg" x="0" y="0" width="1920" height="1080" fill="#F7F8F5" data-name="Background" data-locked/>
+<text x="120" y="100" font-size="28" font-weight="600" fill="#F50132" data-box="120 68 1100 44" data-name="Kicker" letter-spacing="2">STRENGTH · EXECUTION</text>
+<text x="120" y="200.4" font-size="56" font-weight="500" fill="#1A1A1A" data-box="120 150 1680 64" data-name="Title" letter-spacing="-1">实力 ③ · 12 个月，一个极小的团队建成了这套系统。</text>
+<g data-group data-name="KPI 1">
+<text x="120" y="369.2" font-size="88" font-weight="300" fill="#1A1A1A" data-box="120 290 380 110" data-name="Number 1" data-line-height="1.4">74.5 万</text>
+<text x="120" y="435.2" font-size="28" font-weight="600" fill="#1A1A1A" data-box="120 410 380 44" data-name="Label 1" data-line-height="1.4">行 TypeScript</text>
+<text x="120" y="481.8" font-size="22" font-weight="400" fill="#666666" data-box="120 462 380 120" data-name="Note 1" data-line-height="1.4">主应用 + 6 个独立服务：协作、索引、同步、嵌入中继、移动端、桌面端</text>
+</g>
+<g data-group data-name="KPI 2">
+<text x="546" y="369.2" font-size="88" font-weight="300" fill="#1A1A1A" data-box="546 290 380 110" data-name="Number 2" data-line-height="1.4">516</text>
+<text x="546" y="435.2" font-size="28" font-weight="600" fill="#1A1A1A" data-box="546 410 380 44" data-name="Label 2" data-line-height="1.4">个 API 端点</text>
+<text x="546" y="481.8" font-size="22" font-weight="400" fill="#666666" data-box="546 462 380 120" data-name="Note 2" data-line-height="1.4">464 次数据库迁移 · 124 个命名空间化的权限动作</text>
+</g>
+<g data-group data-name="KPI 3">
+<text x="972" y="369.2" font-size="88" font-weight="300" fill="#1A1A1A" data-box="972 290 380 110" data-name="Number 3" data-line-height="1.4">1,196</text>
+<text x="972" y="435.2" font-size="28" font-weight="600" fill="#1A1A1A" data-box="972 410 380 44" data-name="Label 3" data-line-height="1.4">个自动化测试</text>
+<text x="972" y="481.8" font-size="22" font-weight="400" fill="#666666" data-box="972 462 380 120" data-name="Note 3" data-line-height="1.4">1,022 个单元测试 + 174 个 SQL 回归测试，每次合并前跑</text>
+</g>
+<g data-group data-name="KPI 4">
+<text x="1398" y="369.2" font-size="88" font-weight="300" fill="#1A1A1A" data-box="1398 290 380 110" data-name="Number 4" data-line-height="1.4">7,639</text>
+<text x="1398" y="435.2" font-size="28" font-weight="600" fill="#1A1A1A" data-box="1398 410 380 44" data-name="Label 4" data-line-height="1.4">次提交 · 近 90 天</text>
+<text x="1398" y="481.8" font-size="22" font-weight="400" fill="#666666" data-box="1398 462 380 120" data-name="Note 4" data-line-height="1.4">2,804 个已合并 PR；发布走串行合并车道与精确 SHA 验证</text>
+</g>
+<rect x="120" y="610" width="1680" height="2" fill="#D6D7D2" data-name="Rule"/>
+<text x="120" y="665.2" font-size="28" font-weight="600" fill="#F50132" data-box="120 640 400 44" data-name="How heading" data-line-height="1.4">怎么做到的</text>
+<text x="120" y="719.4" font-size="26" fill="#1A1A1A" data-box="120 696 1680 270" data-name="How" data-line-height="1.5"><tspan x="120" dy="0">·  研发流程本身跑在 Dokki 上：PM Agent 把需求整理成 Issue，Worker Agent 在沙盒里实现并开 PR，Reviewer Agent 独立审查，人只做仲裁和发布。</tspan><tspan x="120" dy="39.0">·  HR 花名册在编 20 个 Agent、12 个在岗，覆盖研发、市场、销售、人事；每个 Agent 有岗位说明、停线权和人类负责人。</tspan><tspan x="120" dy="39.0">·  这就是我们要卖给客户的东西：不是「AI 助手」，是一个组织把工作交给人 + Agent 团队之后的运转方式。我们先在自己身上证明了它。</tspan></text>
+<text x="120" y="1024" font-size="24" fill="#666666" data-box="120 992 1250 40" data-name="Footer">Dokki · 天使轮 · 2026-09 · 保密</text><text x="1800" y="1024" font-size="24" fill="#666666" text-anchor="end" data-box="1540 992 260 40" data-name="Page">08</text>
+</svg>

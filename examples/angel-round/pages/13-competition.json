@@ -1,0 +1,36 @@
+{
+ "layout": "table-ledger",
+ "content": {
+  "kicker": "COMPETITION",
+  "title": "竞争 · 目标客户为什么会选 Dokki。",
+  "table": [
+   [
+    "",
+    "它们是什么",
+    "对目标客户的短板"
+   ],
+   [
+    "Notion · Confluence · M365",
+    "人的 wiki + 叠加的 AI",
+    "AI 是外挂；Agent 进不了协作内核；多 Agent 并发写入与可执行 playbook 弱"
+   ],
+   [
+    "飞书 / 豆包工作 · 钉钉悟空",
+    "生态内的 Agent 工作平台，很强",
+    "绑定自家 IM 生态与模型；知识层不可独立迁移；全球化弱"
+   ],
+   [
+    "Glean",
+    "更聪明的企业搜索",
+    "强在读，不在写与沉淀；国内系统兼容差、TCO 高"
+   ],
+   [
+    "ChatGPT · Claude · Cursor",
+    "单人的 Agent 入口",
+    "没有多人 + 多 Agent 的共同工作现场；产出用完即蒸发"
+   ]
+  ],
+  "footer": "Dokki · 天使轮 · 2026-09 · 保密",
+  "page": "13"
+ }
+}

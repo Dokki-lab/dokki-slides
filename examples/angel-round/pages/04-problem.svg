@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<rect id="bg" x="0" y="0" width="1920" height="1080" fill="#F7F8F5" data-name="Background" data-locked/>
+<text x="120" y="100" font-size="28" font-weight="600" fill="#F50132" data-box="120 68 1100 44" data-name="Kicker" letter-spacing="2">THE PROBLEM</text>
+<text x="120" y="207.6" font-size="64" font-weight="500" fill="#1A1A1A" data-box="120 150 1680 73" data-name="Title" letter-spacing="-1">Our agents are working in a jungle.</text>
+<g data-group data-name="Diagram">
+<circle cx="520" cy="620" r="96" fill="#1A1A1A" data-name="Agent node"/>
+<text x="424" y="625.2" font-size="28" font-weight="600" fill="#FFFFFF" text-anchor="middle" data-box="424 600 192 40" data-name="Agent label" data-line-height="1.4">AGENT</text>
+<line x1="520" y1="520" x2="520" y2="420" stroke="#D6D7D2" stroke-width="3" stroke-dasharray="10 8" data-arrow="end" data-name="Link Docs"/>
+<rect x="450" y="348" width="140" height="64" rx="8" fill="#FFFFFF" stroke="#D6D7D2" stroke-width="2" data-name="Docs box"/>
+<text x="450" y="387.4" font-size="26" font-weight="500" fill="#1A1A1A" text-anchor="middle" data-box="450 364 140 32" data-name="Docs" data-line-height="1.4">Docs</text>
+<line x1="607" y1="570" x2="719" y2="520" stroke="#D6D7D2" stroke-width="3" stroke-dasharray="10 8" data-arrow="end" data-name="Link Tables"/>
+<rect x="710" y="468" width="140" height="64" rx="8" fill="#FFFFFF" stroke="#D6D7D2" stroke-width="2" data-name="Tables box"/>
+<text x="709" y="507.4" font-size="26" font-weight="500" fill="#1A1A1A" text-anchor="middle" data-box="709 484 140 32" data-name="Tables" data-line-height="1.4">Tables</text>
+<line x1="607" y1="670" x2="719" y2="720" stroke="#D6D7D2" stroke-width="3" stroke-dasharray="10 8" data-arrow="end" data-name="Link Chat"/>
+<rect x="710" y="708" width="140" height="64" rx="8" fill="#FFFFFF" stroke="#D6D7D2" stroke-width="2" data-name="Chat box"/>
+<text x="709" y="747.4" font-size="26" font-weight="500" fill="#1A1A1A" text-anchor="middle" data-box="709 724 140 32" data-name="Chat" data-line-height="1.4">Chat</text>
+<line x1="520" y1="720" x2="520" y2="820" stroke="#D6D7D2" stroke-width="3" stroke-dasharray="10 8" data-arrow="end" data-name="Link CRM"/>
+<rect x="450" y="828" width="140" height="64" rx="8" fill="#FFFFFF" stroke="#D6D7D2" stroke-width="2" data-name="CRM box"/>
+<text x="450" y="867.4" font-size="26" font-weight="500" fill="#1A1A1A" text-anchor="middle" data-box="450 844 140 32" data-name="CRM" data-line-height="1.4">CRM</text>
+<line x1="433" y1="670" x2="321" y2="720" stroke="#D6D7D2" stroke-width="3" stroke-dasharray="10 8" data-arrow="end" data-name="Link Files"/>
+<rect x="190" y="708" width="140" height="64" rx="8" fill="#FFFFFF" stroke="#D6D7D2" stroke-width="2" data-name="Files box"/>
+<text x="190" y="747.4" font-size="26" font-weight="500" fill="#1A1A1A" text-anchor="middle" data-box="190 724 140 32" data-name="Files" data-line-height="1.4">Files</text>
+<line x1="433" y1="570" x2="321" y2="520" stroke="#D6D7D2" stroke-width="3" stroke-dasharray="10 8" data-arrow="end" data-name="Link Browser"/>
+<rect x="190" y="468" width="140" height="64" rx="8" fill="#FFFFFF" stroke="#D6D7D2" stroke-width="2" data-name="Browser box"/>
+<text x="190" y="507.4" font-size="26" font-weight="500" fill="#1A1A1A" text-anchor="middle" data-box="190 484 140 32" data-name="Browser" data-line-height="1.4">Browser</text>
+</g>
+<text x="120" y="925.2" font-size="28" font-weight="600" fill="#F50132" data-box="120 900 900 44" data-name="Caption" data-line-height="1.4">Context copied. Decisions lost. Work restarted.</text>
+<rect x="1000" y="300" width="2" height="560" fill="#D6D7D2" data-name="Divider"/>
+<text x="1040" y="323.4" font-size="26" fill="#1A1A1A" data-box="1040 300 760 540" data-name="Symptoms" data-line-height="1.5"><tspan x="1040" dy="0">·  工具能被调用，不等于一项工作有连续的状态：版本、权限、谁改了什么、下一步依赖什么，散在六个系统里。</tspan><tspan x="1040" dy="39.0">·  上下文在复制、转换和交接中丢失。最终的 PDF 记录了「是什么」，没有「为什么」「被否决了什么」「谁确认的」。</tspan><tspan x="1040" dy="39.0">·  多个 Agent 并发改同一份东西会互相覆盖；改完自己也看不到结果，越改越歪。</tspan><tspan x="1040" dy="39.0">·  于是我们不断写指令、建 MCP、写 Skills，让 Agent 去适应围绕人设计的软件。</tspan></text>
+<text x="1040" y="905.2" font-size="28" font-weight="600" fill="#1A1A1A" data-box="1040 880 760 90" data-name="Question" data-line-height="1.35">为什么不直接给 Agent 建一套适合它工作的基础设施，再让人自然地参与进来？</text>
+<text x="120" y="1024" font-size="24" fill="#666666" data-box="120 992 1250 40" data-name="Footer">Dokki · 天使轮 · 2026-09 · 保密</text><text x="1800" y="1024" font-size="24" fill="#666666" text-anchor="end" data-box="1540 992 260 40" data-name="Page">04</text>
+</svg>

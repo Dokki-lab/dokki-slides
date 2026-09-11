@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<rect id="bg" x="0" y="0" width="1920" height="1080" fill="#F7F8F5" data-name="Background" data-locked/>
+<text x="120" y="100" font-size="28" font-weight="600" fill="#F50132" data-box="120 68 1100 44" data-name="Kicker" letter-spacing="2">TEAM</text>
+<text x="120" y="207.6" font-size="64" font-weight="500" fill="#1A1A1A" data-box="120 150 1680 73" data-name="Title" letter-spacing="-1">团队 · 为什么是我们。</text>
+<g data-group data-name="Brad Bao">
+<circle cx="160" cy="330" r="40" fill="#1A1A1A" data-name="Brad Bao avatar"/>
+<text x="220" y="323.0" font-size="30" font-weight="600" fill="#1A1A1A" data-box="220 296 420 40" data-name="Brad Bao name" data-line-height="1.4">Brad Bao</text>
+<text x="220" y="359.6" font-size="24" font-weight="400" fill="#666666" data-box="220 338 420 36" data-name="Brad Bao role" data-line-height="1.4">创始人 &amp; CEO</text>
+<text x="120" y="420.7" font-size="23" fill="#1A1A1A" data-box="120 400 520 260" data-name="Brad Bao bio" data-line-height="1.45"><tspan x="120" dy="0">清华大学。前 Cobo（数字资产基础设施）：生成式 AI、自动驾驶与区块链方向的研发与工程。常驻新加坡。</tspan><tspan x="120" dy="33.35">一个人带着一支 Agent 团队把 Dokki 做到今天的状态；产品、架构与研发流程的设计者。</tspan></text>
+</g>
+<g data-group data-name="Chase Chen">
+<circle cx="728" cy="330" r="40" fill="#1A1A1A" data-name="Chase Chen avatar"/>
+<text x="788" y="323.0" font-size="30" font-weight="600" fill="#1A1A1A" data-box="788 296 420 40" data-name="Chase Chen name" data-line-height="1.4">Chase Chen</text>
+<text x="788" y="359.6" font-size="24" font-weight="400" fill="#666666" data-box="788 338 420 36" data-name="Chase Chen role" data-line-height="1.4">产品与工程</text>
+<text x="688" y="420.7" font-size="23" fill="#1A1A1A" data-box="688 400 520 260" data-name="Chase Chen bio" data-line-height="1.45"><tspan x="688" dy="0">负责客户侧技术落地：Patsnap POC 的压力测试、RBAC 上线、Confluence 迁移与 Jira 联动；产品导览与用户手册。</tspan></text>
+</g>
+<g data-group data-name="Lu Yang">
+<circle cx="1296" cy="330" r="40" fill="#1A1A1A" data-name="Lu Yang avatar"/>
+<text x="1356" y="323.0" font-size="30" font-weight="600" fill="#1A1A1A" data-box="1356 296 420 40" data-name="Lu Yang name" data-line-height="1.4">Lu Yang</text>
+<text x="1356" y="359.6" font-size="24" font-weight="400" fill="#666666" data-box="1356 338 420 36" data-name="Lu Yang role" data-line-height="1.4">商务与销售</text>
+<text x="1256" y="420.7" font-size="23" fill="#1A1A1A" data-box="1256 400 520 260" data-name="Lu Yang bio" data-line-height="1.45"><tspan x="1256" dy="0">负责企业客户访谈、销售 Deck 与一线销售场景设计（拜访后跟进闭环）。</tspan></text>
+</g>
+<rect x="120" y="680" width="1680" height="2" fill="#D6D7D2" data-name="Rule"/>
+<text x="120" y="731.2" font-size="28" font-weight="600" fill="#F50132" data-box="120 706 600 40" data-name="Why heading" data-line-height="1.4">为什么我们有能力赢</text>
+<text x="120" y="781.6" font-size="24" fill="#1A1A1A" data-box="120 760 1680 210" data-name="Why" data-line-height="1.5"><tspan x="120" dy="0">·  交付速度：12 个月建成第 8 页的系统，近 90 天 7,639 次提交、2,804 个合并 PR——因为我们自己就是「人 + Agent 团队」的第一个客户。</tspan><tspan x="120" dy="36.0">·  洞察来自实践：五堵墙、三类引擎、上下文闭环都是在自己的研发和市场流程里撞出来的，不是从行业报告里抄的。</tspan><tspan x="120" dy="36.0">·  Agent 基础设施与实时协作两边的工程经验同时在一个团队里，这个组合很少见。</tspan></text>
+<text x="120" y="1024" font-size="24" fill="#666666" data-box="120 992 1250 40" data-name="Footer">Dokki · 天使轮 · 2026-09 · 保密</text><text x="1800" y="1024" font-size="24" fill="#666666" text-anchor="end" data-box="1540 992 260 40" data-name="Page">15</text>
+</svg>

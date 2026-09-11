@@ -1,4 +1,4 @@
-// dokki-slides-core — built from Dokki-lab/Dokki@5cb88bcad158e6978e4a645acce8240e55ed02b4 (lib/slides). Do not edit; rebuild with scripts/build-slides-core.mjs.
+// dokki-slides-core — built from Dokki-lab/Dokki@deb49adba2d0d9449da8274e22f5bc663848afd3 (lib/slides). Do not edit; rebuild with scripts/build-slides-core.mjs.
 
 // lib/slides/model.ts
 var SLIDE_DECK_SCHEMA_VERSION = 1;

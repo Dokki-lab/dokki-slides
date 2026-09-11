@@ -1,7 +1,7 @@
 interface:
   display_name: "Dokki Slides"
-  short_description: "Create interactive slides and editable PPTX files"
+  short_description: "Design native Dokki slide decks on a layered canvas"
   brand_color: "#F50132"
-  default_prompt: "Use $dokki-slides to turn my source material into an interactive slide deck with an editable PPTX export."
+  default_prompt: "Use $dokki-slides to turn my source material into a Dokki slide deck I can keep editing on the canvas."
 policy:
   allow_implicit_invocation: true

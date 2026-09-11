@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<rect id="bg" x="0" y="0" width="1920" height="1080" fill="#F7F8F5" data-name="Background" data-locked/>
+<text x="120" y="100" font-size="28" font-weight="600" fill="#F50132" data-box="120 68 1100 44" data-name="Kicker" letter-spacing="2">OPEN NETWORK</text>
+<text x="120" y="200.4" font-size="56" font-weight="500" fill="#1A1A1A" data-box="120 150 1680 64" data-name="Title" letter-spacing="-1">开放的 Agent 协作网络：带着你的 Agent 来，保留选择权。</text>
+<g data-group data-name="Network">
+<rect x="370" y="500" width="380" height="120" rx="60" fill="#1A1A1A" data-name="Hub"/>
+<text x="370" y="566.8" font-size="32" font-weight="600" fill="#FFFFFF" text-anchor="middle" data-box="370 538 380 44" data-name="Hub label" data-line-height="1.4">同一项工作</text>
+<line x1="560" y1="300" x2="560" y2="560" stroke="#D6D7D2" stroke-width="4" data-name="Link 原生 Agent"/>
+<line x1="220" y1="800" x2="560" y2="560" stroke="#D6D7D2" stroke-width="4" data-name="Link 本地 Harness"/>
+<line x1="900" y1="800" x2="560" y2="560" stroke="#D6D7D2" stroke-width="4" data-name="Link 外部 Agent"/>
+<circle cx="560" cy="300" r="76" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3" data-name="原生 Agent node"/>
+<text x="460" y="303.6" font-size="24" font-weight="600" fill="#1A1A1A" text-anchor="middle" data-box="460 282 200 40" data-name="原生 Agent label" data-line-height="1.4">原生 Agent</text>
+<circle cx="220" cy="800" r="76" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3" data-name="本地 Harness node"/>
+<text x="120" y="803.6" font-size="24" font-weight="600" fill="#1A1A1A" text-anchor="middle" data-box="120 782 200 40" data-name="本地 Harness label" data-line-height="1.4">本地 Harness</text>
+<circle cx="900" cy="800" r="76" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3" data-name="外部 Agent node"/>
+<text x="800" y="803.6" font-size="24" font-weight="600" fill="#1A1A1A" text-anchor="middle" data-box="800 782 200 40" data-name="外部 Agent label" data-line-height="1.4">外部 Agent</text>
+</g>
+<rect x="1080" y="260" width="2" height="700" fill="#D6D7D2" data-name="Divider"/>
+<text x="1120" y="285.2" font-size="28" font-weight="600" fill="#1A1A1A" data-box="1120 260 680 40" data-name="原生 Agent heading" data-line-height="1.4">原生 Agent</text>
+<text x="1120" y="327.6" font-size="24" font-weight="400" fill="#666666" data-box="1120 306 680 120" data-name="原生 Agent text" data-line-height="1.45">每个租户的默认 Dokki 助理和自建 Agent：完整的工作台体验、记忆、定时任务、审批。</text>
+<text x="1120" y="461.2" font-size="28" font-weight="600" fill="#1A1A1A" data-box="1120 436 680 40" data-name="本地 Harness heading" data-line-height="1.4">本地 Harness</text>
+<text x="1120" y="503.6" font-size="24" font-weight="400" fill="#666666" data-box="1120 482 680 120" data-name="本地 Harness text" data-line-height="1.45">Claude Code、Codex、CLI、代码沙箱通过 Dokki Bridge 参与同一项工作：读资料、回写成果、接续状态。</text>
+<text x="1120" y="637.2" font-size="28" font-weight="600" fill="#1A1A1A" data-box="1120 612 680 40" data-name="外部 Agent heading" data-line-height="1.4">外部 Agent</text>
+<text x="1120" y="679.6" font-size="24" font-weight="400" fill="#666666" data-box="1120 658 680 120" data-name="外部 Agent text" data-line-height="1.45">ChatGPT、Claude、Cursor、企业自建 Agent 经 MCP 接入，获得与人同等的 scoped 权限、逐文档角色和审计轨迹。</text>
+<text x="1120" y="813.2" font-size="28" font-weight="600" fill="#F50132" data-box="1120 788 400 40" data-name="Principles heading" data-line-height="1.4">三条原则</text>
+<text x="1120" y="857.6" font-size="24" fill="#1A1A1A" data-box="1120 836 680 120" data-name="Principles" data-line-height="1.45"><tspan x="1120" dy="0">·  模型无关：换模型不丢上下文。</tspan><tspan x="1120" dy="34.8">·  数据可带走：导出、自有域名发布、任意 MCP 客户端直查。</tspan><tspan x="1120" dy="34.8">·  私有上下文不跨组织共享。</tspan></text>
+<text x="120" y="1024" font-size="24" fill="#666666" data-box="120 992 1250 40" data-name="Footer">Dokki · 天使轮 · 2026-09 · 保密</text>
+<text x="1800" y="1024" font-size="24" fill="#666666" text-anchor="end" data-box="1540 992 260 40" data-name="Page">09</text>
+</svg>

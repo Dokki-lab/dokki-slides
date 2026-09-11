@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<rect id="bg" x="0" y="0" width="1920" height="1080" fill="#F7F8F5" data-name="Background" data-locked/>
+<text x="120" y="100" font-size="28" font-weight="600" fill="#F50132" data-box="120 68 1100 44" data-name="Kicker" letter-spacing="2">LONG-TERM ADVANTAGE</text>
+<text x="120" y="207.6" font-size="64" font-weight="500" fill="#1A1A1A" data-box="120 150 1680 73" data-name="Title" letter-spacing="-1">Work creates context. Context improves work.</text>
+<g data-group data-name="Loop">
+<rect x="220" y="380" width="240" height="96" rx="48" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3" data-name="Step 工作"/>
+<text x="220" y="436.8" font-size="32" font-weight="600" fill="#1A1A1A" text-anchor="middle" data-box="220 408 240 44" data-name="Step label 工作" data-line-height="1.4">工作</text>
+<line x1="468" y1="428" x2="552" y2="428" stroke="#1A1A1A" stroke-width="3" data-arrow="end" data-name="Arrow 1"/>
+<rect x="560" y="380" width="240" height="96" rx="48" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3" data-name="Step 捕获"/>
+<text x="560" y="436.8" font-size="32" font-weight="600" fill="#1A1A1A" text-anchor="middle" data-box="560 408 240 44" data-name="Step label 捕获" data-line-height="1.4">捕获</text>
+<line x1="808" y1="428" x2="892" y2="428" stroke="#1A1A1A" stroke-width="3" data-arrow="end" data-name="Arrow 2"/>
+<rect x="900" y="380" width="240" height="96" rx="48" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3" data-name="Step 验证"/>
+<text x="900" y="436.8" font-size="32" font-weight="600" fill="#1A1A1A" text-anchor="middle" data-box="900 408 240 44" data-name="Step label 验证" data-line-height="1.4">验证</text>
+<line x1="1148" y1="428" x2="1232" y2="428" stroke="#1A1A1A" stroke-width="3" data-arrow="end" data-name="Arrow 3"/>
+<rect x="1240" y="380" width="240" height="96" rx="48" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3" data-name="Step 改进"/>
+<text x="1240" y="436.8" font-size="32" font-weight="600" fill="#1A1A1A" text-anchor="middle" data-box="1240 408 240 44" data-name="Step label 改进" data-line-height="1.4">改进</text>
+<path d="M 1360 484 L 1360 560 L 340 560 L 340 484" fill="none" stroke="#F50132" stroke-width="3" stroke-dasharray="12 10" data-name="Return path"/>
+<line x1="340" y1="540" x2="340" y2="486" stroke="#F50132" stroke-width="3" data-arrow="end" data-name="Return arrow"/>
+</g>
+<text x="420" y="603.4" font-size="28" font-weight="600" fill="#F50132" data-box="420 580 900 40" data-name="Loop caption" data-line-height="1.4">↺  下一轮工作从更好的上下文开始</text>
+<text x="120" y="661.6" font-size="24" font-weight="400" fill="#666666" data-box="120 640 1680 80" data-name="Loop note" data-line-height="1.4">改进出口：检索 · Skills · 评测 · Harness · 客户授权下的微调。动态事实留在运行时上下文里；反复出现、稳定的好做法才沉淀成 Skills 和样本。</text>
+<rect x="120" y="740" width="1680" height="2" fill="#D6D7D2" data-name="Rule"/>
+<text x="120" y="795.2" font-size="28" font-weight="600" fill="#1A1A1A" data-box="120 770 800 40" data-name="Customer heading" data-line-height="1.4">客户的上下文优势</text>
+<text x="120" y="841.6" font-size="24" font-weight="400" fill="#1A1A1A" data-box="120 820 780 140" data-name="Customer text" data-line-height="1.45">企业积累自己的事实、判断、流程与结果，让自己的 Agent 越来越懂业务。换到别家，Agent 从零开始。</text>
+<text x="1000" y="795.2" font-size="28" font-weight="600" fill="#1A1A1A" data-box="1000 770 800 40" data-name="Platform heading" data-line-height="1.4">Dokki 的平台优势</text>
+<text x="1000" y="841.6" font-size="24" font-weight="400" fill="#1A1A1A" data-box="1000 820 800 140" data-name="Platform text" data-line-height="1.45">以足够低的使用负担，把这些信息可靠地记录、关联、维护，并提供给不同的 Agent；换模型之后仍然有效。</text>
+<text x="120" y="1024" font-size="24" fill="#666666" data-box="120 992 1250 40" data-name="Footer">Dokki · 天使轮 · 2026-09 · 保密</text><text x="1800" y="1024" font-size="24" fill="#666666" text-anchor="end" data-box="1540 992 260 40" data-name="Page">10</text>
+</svg>

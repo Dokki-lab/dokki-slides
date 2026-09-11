@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+<rect id="bg" x="0" y="0" width="1920" height="1080" fill="#F7F8F5" data-name="Background" data-locked/>
+<text x="120" y="100" font-size="28" font-weight="600" fill="#F50132" data-box="120 68 1100 44" data-name="Kicker" letter-spacing="2">WHAT WE DO</text>
+<text x="120" y="207.6" font-size="64" font-weight="500" fill="#1A1A1A" data-box="120 150 1680 73" data-name="Title" letter-spacing="-1">Dokki 是人和 AI Agent 共用的工作台。</text>
+<text x="120" y="288.8" font-size="32" font-weight="400" fill="#666666" data-box="120 260 1500 110" data-name="Body" data-line-height="1.4">文档、表格、应用放在同一个空间里，由人和多个 Agent 一起读、一起改、一起执行；工作留下的判断和结果，下次直接复用。</text>
+<rect x="120" y="420" width="1680" height="2" fill="#D6D7D2" data-name="Rule"/>
+<g data-group data-name="KPI 1">
+<text x="120" y="546.4" font-size="96" font-weight="300" fill="#1A1A1A" data-box="120 460 380 120" data-name="Number 1" data-line-height="1.4">263</text>
+<text x="120" y="627.0" font-size="30" font-weight="600" fill="#1A1A1A" data-box="120 600 380 44" data-name="Label 1" data-line-height="1.4">注册用户</text>
+<text x="120" y="677.6" font-size="24" font-weight="400" fill="#666666" data-box="120 656 380 120" data-name="Note 1" data-line-height="1.35">近 30 天新增 144 · 产品上线 12 个月</text>
+</g>
+<rect x="520" y="460" width="2" height="320" fill="#D6D7D2" data-name="Divider 1"/>
+<g data-group data-name="KPI 2">
+<text x="546" y="546.4" font-size="96" font-weight="300" fill="#1A1A1A" data-box="546 460 380 120" data-name="Number 2" data-line-height="1.4">6,828</text>
+<text x="546" y="627.0" font-size="30" font-weight="600" fill="#1A1A1A" data-box="546 600 380 44" data-name="Label 2" data-line-height="1.4">Agent 运行 · 近 30 天</text>
+<text x="546" y="677.6" font-size="24" font-weight="400" fill="#666666" data-box="546 656 380 120" data-name="Note 2" data-line-height="1.35">98.6% 正常完成 · 累计 8,390 次</text>
+</g>
+<rect x="946" y="460" width="2" height="320" fill="#D6D7D2" data-name="Divider 2"/>
+<g data-group data-name="KPI 3">
+<text x="972" y="546.4" font-size="96" font-weight="300" fill="#1A1A1A" data-box="972 460 380 120" data-name="Number 3" data-line-height="1.4">67</text>
+<text x="972" y="627.0" font-size="30" font-weight="600" fill="#1A1A1A" data-box="972 600 380 44" data-name="Label 3" data-line-height="1.4">活跃工作区 · 近 30 天</text>
+<text x="972" y="677.6" font-size="24" font-weight="400" fill="#666666" data-box="972 656 380 120" data-name="Note 3" data-line-height="1.35">累计 407 个工作区 · 7,649 个文档 / 表格 / 应用</text>
+</g>
+<rect x="1372" y="460" width="2" height="320" fill="#D6D7D2" data-name="Divider 3"/>
+<g data-group data-name="KPI 4">
+<text x="1398" y="546.4" font-size="96" font-weight="300" fill="#1A1A1A" data-box="1398 460 380 120" data-name="Number 4" data-line-height="1.4">100 席</text>
+<text x="1398" y="627.0" font-size="30" font-weight="600" fill="#1A1A1A" data-box="1398 600 380 44" data-name="Label 4" data-line-height="1.4">企业 POC 进行中</text>
+<text x="1398" y="677.6" font-size="24" font-weight="400" fill="#666666" data-box="1398 656 380 120" data-name="Note 4" data-line-height="1.35">一家 2,000 人规模的中西业务 SaaS 公司</text>
+</g>
+<rect x="120" y="820" width="1680" height="2" fill="#D6D7D2" data-name="Rule"/>
+<text x="120" y="869.8" font-size="22" font-weight="400" fill="#666666" data-box="120 850 1680 80" data-name="Caveat" data-line-height="1.4">口径：2026-09-10 生产库只读读数，已剔除 21 个测试账号；Agent 运行含 Dokki 自用组织（本公司的研发、市场、人事流程全部跑在 Dokki 上）。</text>
+<text x="120" y="1024" font-size="24" fill="#666666" data-box="120 992 1250 40" data-name="Footer">Dokki · 天使轮 · 2026-09 · 保密</text><text x="1800" y="1024" font-size="24" fill="#666666" text-anchor="end" data-box="1540 992 260 40" data-name="Page">02</text>
+</svg>

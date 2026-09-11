@@ -5,12 +5,12 @@
     "name": "Dokki"
   },
   "description": "Open-source skills from Dokki.",
-  "version": "1.1.3",
+  "version": "2.0.0",
   "plugins": [
     {
       "name": "dokki-slides",
-      "description": "Create Dokki-styled interactive slides and export editable PPTX files.",
-      "version": "1.1.3",
+      "description": "Design and build native Dokki slide decks (layered, editable canvas) with a lint and an SVG free-design route.",
+      "version": "2.0.0",
       "source": "./"
     }
   ]

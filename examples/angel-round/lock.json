@@ -1,0 +1,24 @@
+{
+  "theme": "dokki-editorial",
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "type": {
+    "display": 112,
+    "title": 80,
+    "lead": 48,
+    "body": 36,
+    "label": 32,
+    "meta": 28
+  },
+  "rhythm": {},
+  "forbidden": [
+    "three or more identical rounded cards on one slide",
+    "a 'Thank you' closing slide"
+  ],
+  "chrome": {
+    "footer": "",
+    "pageNumbers": true
+  }
+}

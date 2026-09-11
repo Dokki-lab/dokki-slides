@@ -1,0 +1,15 @@
+{
+ "layout": "closing-split",
+ "content": {
+  "title": "天使轮 · 覆盖 18 个月，换三个可验证的结果。",
+  "subtitle": "Open infrastructure for the agent era. Models will evolve. Agents will change. Your organization's context should keep compounding.",
+  "body": [
+   "第一批付费企业客户：Patsnap POC 转正 + [N] 家同类企业，每家至少一条重复运行的人 + Agent 工作流。",
+   "自助线：[N] 个付费组织、$[X] MRR、付费组织 90 日留存 ≥ [Y]%，以 Stripe 真实订阅为口径。",
+   "上下文复用的对照证据：同一工作流第二次执行的验收率、人工纠正时间、每个合格成果成本。",
+   "开放接入：≥ 3 类外部 Agent / Harness 稳定接续同一项工作，交接成功率与状态连续性有数据。"
+  ],
+  "footer": "Dokki · 天使轮 · 2026-09 · 保密",
+  "page": "16"
+ }
+}

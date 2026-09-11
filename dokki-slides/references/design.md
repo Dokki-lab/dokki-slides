@@ -1,66 +1,85 @@
-# Dokki Editorial Grid
+# Design contract — the Dokki Editorial Grid
 
-Dokki decks are editorial narratives, not miniature dashboards. The house style combines a strict Swiss grid with Dokki Fusion: quiet paper, decisive black type, one signal-red accent, visible structure, and generous whitespace.
+Editorial narratives, not miniature dashboards: quiet paper, decisive ink, one signal red, visible structure, generous whitespace. The canvas is 1920×1080 px; 1 px here is 0.5 pt in PowerPoint.
 
-## 1. Lock the communication contract
+## 1. Communication contract
 
-Before composing slides, write a short contract:
+Six fields, confirmed before any visual decision (blanks are honest; never invent):
 
-- Audience: who decides or acts after the presentation?
-- Intent: inform, align, persuade, decide, or teach?
-- Outcome: what should the audience believe or do?
-- Evidence: which claims have sources, and which values are illustrative?
-- Length: target slide count and speaking time.
+| Field | Question |
+|---|---|
+| Audience | Who decides or acts after this? |
+| Intent | inform · align · persuade · decide · teach |
+| Outcome | What should they believe or do next? |
+| Core message | One sentence the deck exists to land |
+| Delivery context | Presented live (large room / screen share) or read alone; that sets density and type size |
+| Language | BCP-47; CJK decks use the CJK font stack and shorter lines |
 
-Then propose up to three coherent directions. A direction names the narrative angle, layout behavior, image strategy, and emotional tone—not merely a palette. Select one and keep it locked for the deck.
+Then one **direction**: narrative angle, layout behaviour, image strategy, tone. Offer alternatives only when asked.
 
-## 2. Build the narrative before the canvas
+## 2. Semantic types — how binding is each instruction
 
-Use this arc unless the source demands another:
+| Type | Meaning | Example |
+|---|---|---|
+| **Literal** | reproduce exactly | a quoted number, a brand name, a legal line |
+| **Semantic** | keep the meaning, wording may change | "explain why now" |
+| **Reference** | free to replace with no justification | "something like a timeline" |
+| **(binding)** | suffix that turns any field Literal | "title (binding)" |
 
-1. Hook — the promise or tension.
-2. Context — why the current state fails.
-3. Core — the evidence, model, or proposal.
-4. Shift — what changes and how.
-5. Takeaway — the decision or next move.
+Default is Semantic. Write the type next to anything that is not.
 
-Give every slide one `intent` and exactly one element marked `primary: true`. Write claim titles rather than topic labels. Put citations and talk tracks in notes.
+## 3. Roster rules
 
-## 3. Use the Dokki palette by role
+- Every slide has an **audience move**; none, then merge or cut.
+- **Rhythm** per slide: `anchor` (cover, section, statement, closing), `dense` (evidence), `breathing` (one idea, lots of air). Never three `dense` in a row; follow evidence with air.
+- **Relationships** name the information structure before geometry: `order` (steps, time), `link` (A affects B), `parent` (system and parts), `membership` (categories), `contrast` (before/after, us/them), `overlap` (shared ground). The relationship picks the silhouette (see layouts.md), and it is what the carrier receipt is reconciled against.
+- Claim titles, not topic labels. Sources and talk track go to speaker notes.
 
-For `theme.style: "dokki-editorial"`, use these exact tokens:
+## 4. Palette by role (theme `dokki-editorial`)
 
 | Role | Hex | Use |
-| --- | --- | --- |
-| Canvas | `F7F8F5` | Default slide background |
-| Paper | `FFFFFF` | Inset planes and tables |
-| Ink | `1A1A1A` | Primary type and structure |
-| Muted | `666666` | Secondary copy and metadata |
-| Signal | `F50132` | One focal point or state change |
-| Line | `D6D7D2` | Hairlines and quiet separation |
-| Dark | `050706` | High-contrast fields |
-| On signal | `FFFFFF` | Type on signal red |
+|---|---|---|
+| Canvas (`background`) | `#F7F8F5` | slide background |
+| Paper (`surface`) | `#FFFFFF` | inset planes, tables |
+| Ink (`text`) | `#1A1A1A` | primary type, structure, dark fields |
+| Muted | `#666666` | secondary copy, metadata |
+| Signal (`accent`) | `#F50132` | one focal point or state change per slide |
+| Dark (`accent2`) | `#050706` | high-contrast fields |
+| Line (`accent3`) | `#D6D7D2` | hairlines, quiet separation |
 
-Do not add gradients, glow, glass, drop shadows, purple, or blue. Do not distribute signal red across every object. Neutral tints and additional chart colors require explicit semantic meaning.
+Body contrast ≥ 4.5:1; large text (≥ 36 px, or ≥ 28 px at weight 600) ≥ 3:1 — the lint enforces this against the real backdrop. No gradients, glow, glass or drop shadows in this theme; no purple or blue. Signal red on at most one object per slide; never on body text.
 
-## 4. Typography is structural
+## 5. Typography anchors (px on the 1920 canvas)
 
-- Use Aptos for portable Latin text and PingFang SC or Microsoft YaHei for Chinese.
-- Display and KPI text: 50–72 pt, weight 200–400, tight tracking.
-- Slide title: 35–52 pt, weight 400–600.
-- Lead/subtitle: at least 24 pt.
-- Body: at least 18 pt.
-- Labels/captions: at least 16 pt; metadata/footnotes: at least 14 pt.
-- Small labels are heavier (500–600) and may be uppercase. Large text is lighter.
-- Stack kicker and title vertically. Never shrink copy to rescue a crowded layout; edit or split the slide.
+| Role | Size | Weight | Notes |
+|---|---|---|---|
+| Display (cover, statement) | 96–112 | 300–500 | leading 1.05–1.15, tracking −1 |
+| Title | 64–80 | 500 | leading 1.1 |
+| Lead / subtitle | 48 | 400 | muted |
+| Body | 36 | 400 | leading 1.3–1.45; ≥ 24 px is the floor for anything that must be read from a distance |
+| Label / kicker | 28–32 | 600 | kicker is uppercase with +2 tracking |
+| Meta / footnote | 24–28 | 400 | muted; never below 18 px |
 
-## 5. Compose with evidence, not decoration
+A new size is allowed twice deck-wide before it becomes a named role. Never shrink copy to rescue a crowded slide: restructure, shorten, split, or reflow first.
 
-- Use images as evidence, atmosphere, or spatial anchors; decide their role before sourcing them.
-- Preserve image aspect ratio and a quiet zone for overlaid type.
-- Use native text, shapes, charts, and tables when they should remain editable.
-- Prefer hairlines, flat planes, and one strong scale contrast over rounded cards.
-- A chart must express real quantitative structure. Do not invent metrics to fill a data layout.
-- Do not use three or more generic rounded cards on a slide.
+## 6. Grid and chrome
 
-Read [the layout system](layouts.md) to choose and compose a named silhouette. Before delivery, follow [the rendered quality review](quality.md).
+12 columns, 120 px margins, 24 px gutters. Column left edges:
+
+`120 262 404 546 688 830 972 1114 1256 1398 1540 1682` (span of n columns = n·142 − 24)
+
+Content field y = 168 … 940; kicker at y = 72; footer line at y = 992 (deck name left, page number right). Add a running footer only when it carries identity or navigation.
+
+## 7. Composition defaults
+
+- Establish the usable field first, divide it into few macro-regions by information weight; unequal regions for unequal information.
+- Alignment carries hierarchy: related things share an axis, unrelated things do not; break an axis only to perform direction or tension.
+- Boundaries from weakest to strongest: spacing → hairline → tint field → outline → filled plane → dark field. Peers share one strength.
+- Prefer hairlines, planes and one strong scale contrast over rounded cards. Three or more identical rounded cards on a slide is a defect (lint S14).
+- Images are evidence, atmosphere or spatial anchors — decide which before sourcing; keep aspect ratio; give overlaid type a scrim or a plane.
+- Charts express real quantitative structure; never invent a metric to fill a data layout. Prefer the fewest series that make the claim.
+- Density: about 60 words per text box at most (lint S11), ~18 elements per slide (S12); split before you shrink.
+
+## 8. Forbidden
+
+Repeating symmetric card grids without a page job · equal columns chosen for convenience · prose converted into bullets to fit · "Thank you" closing slides · decorative charts · inventing a topology from node count · signal red spread across objects · text smaller than 18 px anywhere.

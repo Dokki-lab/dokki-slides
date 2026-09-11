@@ -1,4 +1,4 @@
-// dokki-slides-core — built from Dokki-lab/Dokki@320f018151fd5c487d8586bacbbc2cc3eab7f12b (lib/slides). Do not edit; rebuild with scripts/build-slides-core.mjs.
+// dokki-slides-core — built from Dokki-lab/Dokki@5cb88bcad158e6978e4a645acce8240e55ed02b4 (lib/slides). Do not edit; rebuild with scripts/build-slides-core.mjs.
 
 // lib/slides/model.ts
 var SLIDE_DECK_SCHEMA_VERSION = 1;
@@ -2018,7 +2018,8 @@ var EDITORIAL_LAYOUTS = [
     description: "Large display claim, one signal rule, meta line.",
     build: (c, ctx) => [
       rule(ctx, "Signal", GRID.col(0), 330, 160, ctx.theme.colors.accent, 12),
-      title(ctx, c, { x: GRID.col(0), y: 380, w: GRID.span(10), h: 300 }, TYPE.display),
+      // 104 px lets a 15-character CJK claim sit on two lines of the full width.
+      title(ctx, c, { x: GRID.col(0), y: 380, w: GRID.span(12), h: 300 }, 104),
       text(
         ctx,
         "Subtitle",

@@ -1,40 +1,87 @@
+<p>
+  <a href="https://dokki.one">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dokki-lab/.github/main/assets/dokki-dark.svg">
+      <img src="https://raw.githubusercontent.com/Dokki-lab/.github/main/assets/dokki-light.svg" alt="Dokki" width="180">
+    </picture>
+  </a>
+</p>
+
 # Dokki Slides
 
-Open-source presentation skill for Dokki, Claude Code, Codex and any agent that runs Node 18+. It designs and builds **native Dokki decks**: a layered, editable scene graph — text, shapes, SVG paths, images, charts, tables, groups — on a 1920×1080 canvas, published as a Dokki Slide that opens in the canvas editor and exports editable PPTX from there.
+Create presentations you can keep editing. This agent skill builds native Dokki decks with text, shapes, images, charts and tables as individual layers, plus a local HTML preview. Export editable PPTX through Dokki's slide editor.
 
-## What changed in v2
+[Install](#install) · [Run an example](#run-an-example) · [Skill guide](dokki-slides/SKILL.md) · [MIT-0 license](LICENSE)
 
-- The deck is a scene graph (`deck.json`), not an HTML string; `index.html` is derived from it.
-- Fourteen named silhouettes of the Dokki Editorial Grid ship as real layouts: give them content, they place it on the grid, lint-clean.
-- Free design: author any slide as SVG under a closed contract and every shape, path, text and image becomes its own editable layer.
-- A deterministic lint (bounds, overflow, overlap, WCAG contrast, size floors, card grids, rhythm) runs locally and inside Dokki's `slides_update`.
-- The same core runs everywhere: `dokki-slides/scripts/vendor/dokki-slides-core.mjs` is built from Dokki's `lib/slides`.
+## What you need
+
+- Node.js 18+ for the local CLI; no runtime dependencies or Dokki account are needed for local previews.
+- An agent that supports skills, such as Dokki, Claude Code or Codex, for the guided authoring workflow.
+- A Dokki account and workspace connection to publish a native slide and export PPTX through the editor.
 
 ## Install
 
-```bash
+```sh
 npx skills add Dokki-lab/dokki-slides --skill dokki-slides
 ```
 
-## Try it
+Try asking your agent:
 
-```bash
-node dokki-slides/scripts/dokki-slides.mjs init /tmp/deck --title "Hello"
-node dokki-slides/scripts/dokki-slides.mjs layouts
-node dokki-slides/scripts/dokki-slides.mjs package /tmp/deck/deck.json --out-dir /tmp/deck/dist
-open /tmp/deck/dist/index.html
+> Use dokki-slides to turn my product brief into a five-slide presentation. Keep the content source-backed and give me an editable deck and local preview.
+
+## Run an example
+
+To try the bundled example independently of an agent, clone this repository and run from its root:
+
+```sh
+git clone https://github.com/Dokki-lab/dokki-slides.git
+cd dokki-slides
+node dokki-slides/scripts/dokki-slides.mjs check examples/angel-round/deck.json
+node dokki-slides/scripts/dokki-slides.mjs package examples/angel-round/deck.json --out-dir dist/angel-round
 ```
 
-See `examples/angel-round/` for a full deck built with the workflow in `dokki-slides/SKILL.md`.
+Open `dist/angel-round/index.html` in your browser. Arrow keys navigate; `N` toggles speaker notes. The source deck remains `examples/angel-round/deck.json`; the output includes a quality report and individual slide previews.
 
-## Update the vendored core
+## How it works
 
-From a Dokki checkout: `node scripts/build-slides-core.mjs path/to/dokki-slides/dokki-slides/scripts/vendor/dokki-slides-core.mjs`. The bundle header records the Dokki revision; `quality-report.json` repeats it as `core`.
+- **Editable by design:** `deck.json` is a scene graph on a 1920×1080 canvas; HTML is derived from it.
+- **Layouts with structure:** fourteen editorial layouts place content on the grid.
+- **Custom visuals:** author SVG within the [SVG contract](dokki-slides/references/svg-contract.md) to create editable layers.
+- **Quality checks:** local validation checks bounds, overflow, overlap, contrast, size and layout rhythm.
+- **Same core as Dokki:** the vendored core records its source revision in the bundle and quality report.
 
-## Layout
+For a new deck, start with `init`, inspect `layouts`, then follow the [skill workflow](dokki-slides/SKILL.md):
 
-- `dokki-slides/` — the skill: `SKILL.md`, `references/`, `scripts/dokki-slides.mjs`, `scripts/vendor/`
-- `examples/` — decks built with the skill
-- `test/` — CLI tests (`pnpm test`)
+```sh
+node dokki-slides/scripts/dokki-slides.mjs init /tmp/my-deck --title "My presentation"
+node dokki-slides/scripts/dokki-slides.mjs layouts
+```
 
-MIT.
+## Publish and export
+
+Follow the [Dokki delivery guide](dokki-slides/references/dokki.md) to publish the generated HTML as a native Dokki Slide. Open it in the canvas editor to continue editing and export PPTX. The local CLI produces the deck and HTML preview; it does not directly export PPTX.
+
+Faithfully reproducing an uploaded PowerPoint file is outside this skill's scope. Its text can be used as source material for a new deck.
+
+## Development
+
+Run `node --test` from the repository root. Validate and package the example with the commands above before submitting a change.
+
+Maintainers update the vendored core from a Dokki checkout with:
+
+```sh
+node scripts/build-slides-core.mjs path/to/dokki-slides/dokki-slides/scripts/vendor/dokki-slides-core.mjs
+```
+
+The bundle header and `quality-report.json` identify the source revision.
+
+
+## Contributing and support
+
+Bug reports, examples and focused improvements are welcome. Read the [contribution guide](https://github.com/Dokki-lab/.github/blob/main/CONTRIBUTING.md), use this repository's Issues for reproducible problems, and follow [private security reporting](https://github.com/Dokki-lab/.github/blob/main/SECURITY.md) for vulnerabilities.
+
+[Dokki](https://dokki.one) · [Documentation](https://dokki.one/pub/docs) · [All projects](https://github.com/Dokki-lab) · [Support](https://github.com/Dokki-lab/.github/blob/main/SUPPORT.md)
+
+## License
+
+[MIT-0](LICENSE).

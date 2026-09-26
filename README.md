@@ -9,6 +9,8 @@
 
 # Dokki Slides
 
+**You lead. Agents do the work.** [Dokki](https://dokki.one) brings your team, agents and work into one workspace—from the first goal to shared, editable results.
+
 Create presentations you can keep editing. This agent skill builds native Dokki decks with text, shapes, images, charts and tables as individual layers, plus a local HTML preview. Export editable PPTX through Dokki's slide editor.
 
 [Install](#install) · [Run an example](#run-an-example) · [Skill guide](dokki-slides/SKILL.md) · [MIT-0 license](LICENSE)
